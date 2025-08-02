@@ -1,7 +1,7 @@
 'use client'
 
-import type { CreateTodoInput, Todo, UpdateTodoInput } from '../types/todo'
-import { TodoItem } from './todo-item'
+import type { Todo, UpdateTodoInput } from '../types/todo'
+import { TodoItem } from './todoItem'
 
 interface TodoListProps {
   todos: Todo[]

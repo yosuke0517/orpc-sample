@@ -1,9 +1,9 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
-import { TodoFilters } from '@/features/todos/components/todo-filters'
-import { TodoForm } from '@/features/todos/components/todo-form'
-import { TodoList } from '@/features/todos/components/todo-list'
+import { TodoFilters } from '@/features/todos/components/todoFilters'
+import { TodoForm } from '@/features/todos/components/todoForm'
+import { TodoList } from '@/features/todos/components/todoList'
 import type {
   CreateTodoInput,
   Todo,
@@ -47,6 +47,8 @@ export default function HomePage() {
   useEffect(() => {
     fetchTodos()
   }, [fetchTodos])
+
+  console.log(todos)
 
   // フィルター済みのTodoを取得
   const filteredTodos = todos.filter((todo) => {
