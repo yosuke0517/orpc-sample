@@ -1,0 +1,54 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.1.3/schema.json",
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80,
+    "attributePosition": "auto"
+  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noExplicitAny": "error",
+        "noUnsafeDeclarationMerging": "error"
+      },
+      "style": {
+        "noNonNullAssertion": "warn",
+        "useAsConstAssertion": "error"
+      },
+      "correctness": {
+        "noUnusedVariables": "error",
+        "useExhaustiveDependencies": "warn"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "es5",
+      "semicolons": "asNeeded",
+      "arrowParentheses": "always",
+      "bracketSpacing": true,
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto"
+    }
+  },
+  "files": {
+    "includes": [
+      "**/src/**/*.{js,jsx,ts,tsx}",
+      "**/*.{js,jsx,ts,tsx,json}",
+      "!**/node_modules",
+      "!**/.next",
+      "!**/dist",
+      "!**/build"
+    ]
+  }
+}
