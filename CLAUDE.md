@@ -25,11 +25,16 @@ Next.js App Router、oRPC、TypeScriptを使用した型安全なTodo CRUDアプ
 - **バリデーション**: Zod
 - **リンター/フォーマッター**: Biome
 
-## TypeScriptルール
+## コーディング規約
 
-1. **any型の禁止**: `any`は使用せず、`unknown`と型ガードを活用
-2. **as最小化**: 型アサーションは避け、型ガード関数を優先
-3. **satisfies積極利用**: オブジェクトリテラルの型チェックに活用
+詳細なTypeScriptコーディング規約は **`docs/CODING_GUIDE.md`** を参照してください。
+
+主要ルール:
+- any型の禁止
+- as（型アサーション）の最小化
+- satisfiesの積極利用
+- type aliasの優先使用
+- ファイル名はキャメルケース
 
 ## ディレクトリ構成
 
