@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "command": "json_input=$(cat); file_path=$(echo \"$json_input\" | jq -r '.toolInput.file_path // empty'); if [[ ! -z \"$file_path\" ]] && ([[ \"$file_path\" == *.ts ]] || [[ \"$file_path\" == *.tsx ]]); then cd \"$CLAUDE_PROJECT_DIR\" && npx prettier --write \"$file_path\" >/dev/null 2>&1 || true; fi"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "command": "python3 -c \"import sys, json, os; data = json.load(sys.stdin); file_path = data.get('toolInput', {}).get('file_path', ''); sensitive_patterns = ['.env', 'package-lock.json', '.git/']; is_sensitive = any(pattern in file_path for pattern in sensitive_patterns); sys.exit(2 if is_sensitive else 0); print(f'Blocked write to sensitive file: {file_path}' if is_sensitive else '', file=sys.stderr)\""
+      }
+    ]
+  }
+}
