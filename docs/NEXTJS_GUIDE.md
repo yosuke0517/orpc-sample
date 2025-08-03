@@ -678,6 +678,555 @@ export async function getRevalidatedData() {
 - アプリケーションの動的な部分と静的な部分を自動的に識別
 - 最適なレンダリング戦略を適用
 
+## 8. oRPCで新しいドメイン機能を追加する手順
+
+新しいドメイン（例：求人管理）のCRUD機能を追加する際の段階的な手順を説明します。
+
+### Step 1: スキーマ定義
+
+まず、ドメインオブジェクトのZodスキーマを定義します。
+
+```typescript
+// src/features/jobs/types/job.ts
+import { z } from 'zod'
+
+export const JobSchema = z.object({
+  id: z.string().uuid(),
+  title: z.string().min(1, '求人タイトルは必須です'),
+  description: z.string().optional(),
+  company: z.string().min(1, '会社名は必須です'),
+  salary: z.number().min(0).optional(),
+  location: z.string().optional(),
+  isActive: z.boolean().default(true),
+  createdAt: z.date(),
+  updatedAt: z.date(),
+})
+
+export type Job = z.infer<typeof JobSchema>
+
+// フォーム用の型（idやタイムスタンプを除外）
+export const CreateJobInputSchema = JobSchema.omit({ 
+  id: true, 
+  createdAt: true, 
+  updatedAt: true 
+})
+export type CreateJobInput = z.infer<typeof CreateJobInputSchema>
+
+export const UpdateJobInputSchema = JobSchema.partial().omit({ 
+  id: true, 
+  createdAt: true, 
+  updatedAt: true 
+})
+export type UpdateJobInput = z.infer<typeof UpdateJobInputSchema>
+```
+
+### Step 2: oRPCルーターの実装
+
+すべてのCRUD操作をoRPCルーターで定義します。
+
+```typescript
+// src/features/jobs/api/router.ts
+import { z } from 'zod'
+import { orpc } from '@orpc/server'
+import { JobSchema, CreateJobInputSchema, UpdateJobInputSchema } from '../types/job'
+import { db } from '@/lib/db'
+
+export const jobRouter = {
+  // 一覧取得
+  list: orpc
+    .input(z.object({
+      limit: z.number().min(1).max(100).default(20),
+      offset: z.number().min(0).default(0),
+      search: z.string().optional(),
+      isActive: z.boolean().optional(),
+    }))
+    .output(z.object({
+      jobs: z.array(JobSchema),
+      total: z.number(),
+    }))
+    .handler(async ({ input }) => {
+      const where = {
+        ...(input.search && {
+          OR: [
+            { title: { contains: input.search, mode: 'insensitive' } },
+            { company: { contains: input.search, mode: 'insensitive' } },
+          ],
+        }),
+        ...(input.isActive !== undefined && { isActive: input.isActive }),
+      }
+
+      const [jobs, total] = await Promise.all([
+        db.job.findMany({
+          where,
+          take: input.limit,
+          skip: input.offset,
+          orderBy: { createdAt: 'desc' },
+        }),
+        db.job.count({ where }),
+      ])
+
+      return { jobs, total }
+    }),
+
+  // 単体取得
+  findById: orpc
+    .input(z.object({ id: z.string().uuid() }))
+    .output(JobSchema.nullable())
+    .handler(async ({ input }) => {
+      const job = await db.job.findUnique({
+        where: { id: input.id },
+      })
+      return job
+    }),
+
+  // 作成
+  create: orpc
+    .input(CreateJobInputSchema)
+    .output(JobSchema)
+    .handler(async ({ input }) => {
+      const job = await db.job.create({
+        data: {
+          ...input,
+          id: crypto.randomUUID(),
+        },
+      })
+      return job
+    }),
+
+  // 更新
+  update: orpc
+    .input(z.object({
+      id: z.string().uuid(),
+      data: UpdateJobInputSchema,
+    }))
+    .output(JobSchema)
+    .handler(async ({ input }) => {
+      const job = await db.job.update({
+        where: { id: input.id },
+        data: input.data,
+      })
+      return job
+    }),
+
+  // 削除
+  delete: orpc
+    .input(z.object({ id: z.string().uuid() }))
+    .output(z.object({ success: z.boolean() }))
+    .handler(async ({ input }) => {
+      await db.job.delete({
+        where: { id: input.id },
+      })
+      return { success: true }
+    }),
+}
+```
+
+### Step 3: メインルーターに統合
+
+```typescript
+// src/server/router.ts
+import { todoRouter } from '@/features/todos/api/router'
+import { jobRouter } from '@/features/jobs/api/router'
+
+export const router = {
+  todos: todoRouter,
+  jobs: jobRouter, // 新しいドメインを追加
+}
+
+export type AppRouter = typeof router
+```
+
+### Step 4: Server Serviceの作成
+
+Server Componentで使用するデータ取得サービスを作成します。
+
+```typescript
+// src/features/jobs/services/jobService.ts
+import type { Job } from '../types/job'
+
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'
+
+export async function fetchJobs(params: {
+  limit?: number
+  offset?: number
+  search?: string
+  isActive?: boolean
+} = {}): Promise<{ jobs: Job[]; total: number }> {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/jobs/list`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(params),
+      next: { 
+        revalidate: 300, // 5分間キャッシュ
+        tags: ['jobs'] 
+      },
+    })
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch jobs: ${response.status}`)
+    }
+
+    return await response.json()
+  } catch (error) {
+    console.error('Error fetching jobs:', error)
+    return { jobs: [], total: 0 }
+  }
+}
+
+export async function fetchJobById(id: string): Promise<Job | null> {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/jobs/findById`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id }),
+      next: { 
+        revalidate: 60,
+        tags: [`job-${id}`] 
+      },
+    })
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch job: ${response.status}`)
+    }
+
+    return await response.json()
+  } catch (error) {
+    console.error('Error fetching job:', error)
+    return null
+  }
+}
+```
+
+### Step 5: Server Actionsの実装
+
+CUD操作用のServer Actionsを作成します。
+
+```typescript
+// src/features/jobs/actions/jobActions.ts
+'use server'
+
+import { revalidateTag, revalidatePath } from 'next/cache'
+import { redirect } from 'next/navigation'
+import type { CreateJobInput, UpdateJobInput } from '../types/job'
+
+export async function createJobAction(data: CreateJobInput) {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/jobs/create`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+
+    if (!response.ok) {
+      throw new Error(`Failed to create job: ${response.status}`)
+    }
+
+    const job = await response.json()
+    
+    // キャッシュを再検証
+    revalidateTag('jobs')
+    
+    // 作成した求人詳細ページにリダイレクト
+    redirect(`/jobs/${job.id}`)
+  } catch (error) {
+    console.error('Error creating job:', error)
+    throw new Error('求人の作成に失敗しました')
+  }
+}
+
+export async function updateJobAction(id: string, data: UpdateJobInput) {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/jobs/update`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, data }),
+    })
+
+    if (!response.ok) {
+      throw new Error(`Failed to update job: ${response.status}`)
+    }
+
+    // キャッシュを再検証
+    revalidateTag('jobs')
+    revalidateTag(`job-${id}`)
+    revalidatePath(`/jobs/${id}`)
+    
+    return { success: true }
+  } catch (error) {
+    console.error('Error updating job:', error)
+    throw new Error('求人の更新に失敗しました')
+  }
+}
+
+export async function deleteJobAction(id: string) {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/jobs/delete`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id }),
+    })
+
+    if (!response.ok) {
+      throw new Error(`Failed to delete job: ${response.status}`)
+    }
+
+    // キャッシュを再検証
+    revalidateTag('jobs')
+    revalidateTag(`job-${id}`)
+    
+    // 一覧ページにリダイレクト
+    redirect('/jobs')
+  } catch (error) {
+    console.error('Error deleting job:', error)
+    throw new Error('求人の削除に失敗しました')
+  }
+}
+```
+
+### Step 6: Server Componentでページを実装
+
+```typescript
+// src/app/jobs/page.tsx
+import { Suspense } from 'react'
+import { fetchJobs } from '@/features/jobs/services/jobService'
+import { JobList } from '@/features/jobs/components/JobList'
+import { CreateJobForm } from '@/features/jobs/components/CreateJobForm'
+import { JobListSkeleton } from '@/features/jobs/components/JobSkeleton'
+
+export default async function JobsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ search?: string; page?: string }>
+}) {
+  const params = await searchParams
+  const page = Number(params.page) || 1
+  const limit = 20
+  const offset = (page - 1) * limit
+
+  const { jobs, total } = await fetchJobs({
+    limit,
+    offset,
+    search: params.search,
+    isActive: true,
+  })
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <div className="flex justify-between items-center mb-8">
+        <div>
+          <h1 className="text-3xl font-bold">求人一覧</h1>
+          <p className="text-gray-600 mt-2">
+            {total}件の求人が見つかりました
+          </p>
+        </div>
+        <CreateJobForm />
+      </div>
+
+      <Suspense fallback={<JobListSkeleton />}>
+        <JobList 
+          jobs={jobs} 
+          total={total} 
+          currentPage={page}
+          limit={limit}
+        />
+      </Suspense>
+    </div>
+  )
+}
+
+// src/app/jobs/[id]/page.tsx
+import { Suspense } from 'react'
+import { notFound } from 'next/navigation'
+import { fetchJobById } from '@/features/jobs/services/jobService'
+import { JobDetail } from '@/features/jobs/components/JobDetail'
+import { JobDetailSkeleton } from '@/features/jobs/components/JobSkeleton'
+
+export default async function JobDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const { id } = await params
+  const job = await fetchJobById(id)
+
+  if (!job) {
+    notFound()
+  }
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <Suspense fallback={<JobDetailSkeleton />}>
+        <JobDetail job={job} />
+      </Suspense>
+    </div>
+  )
+}
+```
+
+### Step 7: Client Componentの実装
+
+```typescript
+// src/features/jobs/components/CreateJobForm.tsx
+'use client'
+
+import { useState, useTransition } from 'react'
+import { createJobAction } from '../actions/jobActions'
+import type { CreateJobInput } from '../types/job'
+
+export function CreateJobForm() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isPending, startTransition] = useTransition()
+
+  const handleSubmit = async (formData: FormData) => {
+    const data: CreateJobInput = {
+      title: formData.get('title') as string,
+      description: formData.get('description') as string,
+      company: formData.get('company') as string,
+      salary: Number(formData.get('salary')) || undefined,
+      location: formData.get('location') as string,
+      isActive: true,
+    }
+
+    startTransition(async () => {
+      try {
+        await createJobAction(data)
+        setIsOpen(false)
+      } catch (error) {
+        console.error('Error:', error)
+        // TODO: Show error toast
+      }
+    })
+  }
+
+  return (
+    <>
+      <button
+        onClick={() => setIsOpen(true)}
+        className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+      >
+        新しい求人を作成
+      </button>
+
+      {isOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 w-full max-w-md">
+            <h2 className="text-xl font-bold mb-4">求人作成</h2>
+            
+            <form action={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium mb-1">
+                  求人タイトル *
+                </label>
+                <input
+                  name="title"
+                  type="text"
+                  required
+                  disabled={isPending}
+                  className="w-full border rounded-md px-3 py-2"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">
+                  会社名 *
+                </label>
+                <input
+                  name="company"
+                  type="text"
+                  required
+                  disabled={isPending}
+                  className="w-full border rounded-md px-3 py-2"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">
+                  勤務地
+                </label>
+                <input
+                  name="location"
+                  type="text"
+                  disabled={isPending}
+                  className="w-full border rounded-md px-3 py-2"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">
+                  給与
+                </label>
+                <input
+                  name="salary"
+                  type="number"
+                  min="0"
+                  disabled={isPending}
+                  className="w-full border rounded-md px-3 py-2"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">
+                  詳細説明
+                </label>
+                <textarea
+                  name="description"
+                  rows={3}
+                  disabled={isPending}
+                  className="w-full border rounded-md px-3 py-2"
+                />
+              </div>
+
+              <div className="flex justify-end gap-2">
+                <button
+                  type="button"
+                  onClick={() => setIsOpen(false)}
+                  disabled={isPending}
+                  className="px-4 py-2 text-gray-600 border rounded-md"
+                >
+                  キャンセル
+                </button>
+                <button
+                  type="submit"
+                  disabled={isPending}
+                  className="px-4 py-2 bg-blue-600 text-white rounded-md disabled:opacity-50"
+                >
+                  {isPending ? '作成中...' : '作成'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+    </>
+  )
+}
+```
+
+## 新ドメイン追加のメリット
+
+### 1. 統一されたアーキテクチャ
+- すべてのドメインが同じパターンで実装される
+- API仕様が自動生成される
+- 型安全性がエンドツーエンドで保証される
+
+### 2. 優れた開発者体験
+- コード補完とIntelliSenseがフル活用できる
+- APIの変更がコンパイル時に検出される
+- 一貫したエラーハンドリング
+
+### 3. パフォーマンス最適化
+- Server ComponentによるSSR
+- 適切なキャッシュ戦略
+- Suspenseによる段階的レンダリング
+
+### 4. 保守性
+- 明確な責務分離
+- テスタブルなコンポーネント構成
+- 型による自己文書化
+
+この手順に従うことで、新しいドメイン機能を素早く、安全に追加できます。
+
 ## 参考リソース
 
 - [Next.js App Router Documentation](https://nextjs.org/docs/app)
