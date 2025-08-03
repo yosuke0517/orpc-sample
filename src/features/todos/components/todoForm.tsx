@@ -9,9 +9,10 @@ import type { CreateTodoInput } from '../types/todo'
 
 interface TodoFormProps {
   onSubmit: (data: CreateTodoInput) => Promise<void>
+  disabled?: boolean
 }
 
-export function TodoForm({ onSubmit }: TodoFormProps) {
+export function TodoForm({ onSubmit, disabled = false }: TodoFormProps) {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -64,7 +65,7 @@ export function TodoForm({ onSubmit }: TodoFormProps) {
               onChange={(e) => setTitle(e.target.value)}
               placeholder="タイトル"
               error={errors.title}
-              disabled={isLoading}
+              disabled={isLoading || disabled}
             />
           </div>
           <div>
@@ -73,13 +74,13 @@ export function TodoForm({ onSubmit }: TodoFormProps) {
               onChange={(e) => setDescription(e.target.value)}
               placeholder="説明（任意）"
               error={errors.description}
-              disabled={isLoading}
+              disabled={isLoading || disabled}
             />
           </div>
           <Button
             type="submit"
             isLoading={isLoading}
-            disabled={!title.trim()}
+            disabled={!title.trim() || disabled}
             className="w-full"
           >
             追加

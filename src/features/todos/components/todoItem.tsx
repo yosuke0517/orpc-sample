@@ -15,6 +15,7 @@ interface TodoItemProps {
     data: { title: string; description?: string }
   ) => Promise<void>
   onDelete: (id: string) => Promise<void>
+  disabled?: boolean
 }
 
 export function TodoItem({
@@ -22,6 +23,7 @@ export function TodoItem({
   onToggle,
   onUpdate,
   onDelete,
+  disabled = false,
 }: TodoItemProps) {
   const [isEditing, setIsEditing] = useState(false)
   const [title, setTitle] = useState(todo.title)
@@ -76,20 +78,20 @@ export function TodoItem({
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="タイトル"
-          disabled={isLoading}
+          disabled={isLoading || disabled}
         />
         <Textarea
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           placeholder="説明（任意）"
-          disabled={isLoading}
+          disabled={isLoading || disabled}
         />
         <div className="flex gap-2">
           <Button
             size="sm"
             onClick={handleUpdate}
             isLoading={isLoading}
-            disabled={!title.trim()}
+            disabled={!title.trim() || disabled}
           >
             保存
           </Button>
@@ -97,7 +99,7 @@ export function TodoItem({
             size="sm"
             variant="secondary"
             onClick={handleCancel}
-            disabled={isLoading}
+            disabled={isLoading || disabled}
           >
             キャンセル
           </Button>
@@ -111,7 +113,7 @@ export function TodoItem({
       <Checkbox
         checked={todo.completed}
         onChange={handleToggle}
-        disabled={isLoading}
+        disabled={isLoading || disabled}
         className="mt-0.5"
       />
       <div className="flex-1 min-w-0">
@@ -136,7 +138,7 @@ export function TodoItem({
           size="sm"
           variant="ghost"
           onClick={() => setIsEditing(true)}
-          disabled={isLoading}
+          disabled={isLoading || disabled}
         >
           編集
         </Button>
@@ -144,7 +146,7 @@ export function TodoItem({
           size="sm"
           variant="ghost"
           onClick={handleDelete}
-          disabled={isLoading}
+          disabled={isLoading || disabled}
           className="text-red-600 hover:text-red-700 hover:bg-red-50"
         >
           削除

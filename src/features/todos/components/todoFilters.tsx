@@ -7,9 +7,14 @@ import type { TodoFilter } from '../types/todo'
 interface TodoFiltersProps {
   filter: TodoFilter
   onFilterChange: (filter: TodoFilter) => void
+  disabled?: boolean
 }
 
-export function TodoFilters({ filter, onFilterChange }: TodoFiltersProps) {
+export function TodoFilters({
+  filter,
+  onFilterChange,
+  disabled = false,
+}: TodoFiltersProps) {
   const handleCompletedFilter = (completed?: boolean) => {
     onFilterChange({ ...filter, completed })
   }
@@ -28,25 +33,31 @@ export function TodoFilters({ filter, onFilterChange }: TodoFiltersProps) {
   return (
     <div className="space-y-4 p-4 bg-gray-50 rounded-lg">
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label
+          htmlFor="search-input"
+          className="block text-sm font-medium text-gray-700 mb-2"
+        >
           検索
         </label>
         <Input
+          id="search-input"
           value={filter.search || ''}
           onChange={(e) => handleSearchChange(e.target.value)}
           placeholder="タイトルまたは説明で検索..."
+          disabled={disabled}
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <div className="block text-sm font-medium text-gray-700 mb-2">
           ステータス: {completedCount}
-        </label>
+        </div>
         <div className="flex gap-2">
           <Button
             size="sm"
             variant={filter.completed === undefined ? 'primary' : 'secondary'}
             onClick={() => handleCompletedFilter(undefined)}
+            disabled={disabled}
           >
             すべて
           </Button>
@@ -54,6 +65,7 @@ export function TodoFilters({ filter, onFilterChange }: TodoFiltersProps) {
             size="sm"
             variant={filter.completed === false ? 'primary' : 'secondary'}
             onClick={() => handleCompletedFilter(false)}
+            disabled={disabled}
           >
             未完了
           </Button>
@@ -61,6 +73,7 @@ export function TodoFilters({ filter, onFilterChange }: TodoFiltersProps) {
             size="sm"
             variant={filter.completed === true ? 'primary' : 'secondary'}
             onClick={() => handleCompletedFilter(true)}
+            disabled={disabled}
           >
             完了
           </Button>

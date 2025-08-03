@@ -8,6 +8,7 @@ interface TodoListProps {
   onToggle: (id: string) => Promise<void>
   onUpdate: (id: string, data: UpdateTodoInput) => Promise<void>
   onDelete: (id: string) => Promise<void>
+  disabled?: boolean
 }
 
 export function TodoList({
@@ -15,6 +16,7 @@ export function TodoList({
   onToggle,
   onUpdate,
   onDelete,
+  disabled = false,
 }: TodoListProps) {
   if (todos.length === 0) {
     return (
@@ -36,6 +38,7 @@ export function TodoList({
           onToggle={onToggle}
           onUpdate={onUpdate}
           onDelete={onDelete}
+          disabled={disabled}
         />
       ))}
     </div>
