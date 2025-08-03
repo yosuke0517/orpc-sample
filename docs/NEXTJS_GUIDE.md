@@ -94,6 +94,55 @@ export function LikeButton({ postId }: { postId: string }) {
 - ブラウザAPIにアクセスする必要がある
 - インタラクティブなUI要素
 
+### ⚠️ useEffectの使用上の注意
+
+useEffectは副作用管理が複雑になりやすく、不適切な使用はパフォーマンス問題やバグの原因となります。可能な限り避け、代替手段を検討してください。
+
+```typescript
+// ❌ Bad: useEffectでのデータフェッチ
+'use client';
+export function UserList() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    // 問題: 複雑な依存関係、メモリリークのリスク、競合状態
+    fetch('/api/users')
+      .then(res => res.json())
+      .then(data => {
+        setUsers(data);
+        setLoading(false);
+      });
+  }, []); // 依存配列の管理が困難
+  
+  return loading ? <div>Loading...</div> : <UserListView users={users} />;
+}
+
+// ✅ Good: Server Componentでのデータフェッチ
+export default async function UserListPage() {
+  // サーバー側で安全にデータフェッチ
+  const users = await db.user.findMany();
+  return <UserListView users={users} />;
+}
+
+// ✅ Good: Server Actionでの状態更新
+'use server';
+export async function toggleUserStatus(userId: string) {
+  await db.user.update({
+    where: { id: userId },
+    data: { isActive: { not: true } }
+  });
+  revalidatePath('/users');
+}
+```
+
+**useEffect使用時のチェックリスト**:
+- [ ] Server ComponentやServer Actionで代替できないか？
+- [ ] 依存配列は正しく設定されているか？
+- [ ] クリーンアップ関数は必要ないか？
+- [ ] 競合状態やメモリリークの可能性はないか？
+- [ ] パフォーマンスへの影響は適切か？
+
 ### Container/Presentational パターン
 
 ロジックとUIの関心事を分離するために、Container（データ取得・ロジック）とPresentational（UI表示）コンポーネントに分けるパターンが有効です。
