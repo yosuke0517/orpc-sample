@@ -2,5 +2,34 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "description": "Automerge minor and patch updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "description": "Group all non-major updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch"
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update Yarn version in package.json",
+      "fileMatch": ["^package\\.json$"],
+      "matchStrings": [
+        "\"packageManager\": \"yarn@(?<currentValue>\\d+\\.\\d+\\.\\d+)\""
+      ],
+      "datasourceTemplate": "npm",
+      "depNameTemplate": "yarn",
+      "versioningTemplate": "semver"
+    }
+  ],
+  "postUpdateOptions": [
+    "yarnDedupeHighest"
   ]
 }
