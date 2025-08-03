@@ -19,7 +19,7 @@ export default function HomePage() {
   // Todoを取得する関数（oRPC経由）
   const fetchTodos = useCallback(async () => {
     try {
-      const response = await fetch('/api/orpc/todos/list', {
+      const response = await fetch('/api/todos/list', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ export default function HomePage() {
   // Todo作成ハンドラー（oRPC経由）
   const handleCreateTodo = async (data: CreateTodoInput) => {
     try {
-      const response = await fetch('/api/orpc/todos/create', {
+      const response = await fetch('/api/todos/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ export default function HomePage() {
   // Todo更新ハンドラー（oRPC経由）
   const handleUpdateTodo = async (id: string, data: UpdateTodoInput) => {
     try {
-      const response = await fetch('/api/orpc/todos/update', {
+      const response = await fetch('/api/todos/update', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ export default function HomePage() {
   // Todo削除ハンドラー（oRPC経由）
   const handleDeleteTodo = async (id: string) => {
     try {
-      const response = await fetch('/api/orpc/todos/delete', {
+      const response = await fetch('/api/todos/delete', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

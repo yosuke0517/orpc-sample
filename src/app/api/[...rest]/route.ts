@@ -2,9 +2,10 @@ import { OpenAPIHandler } from '@orpc/openapi/fetch'
 import { OpenAPIReferencePlugin } from '@orpc/openapi/plugins'
 import { ZodToJsonSchemaConverter } from '@orpc/zod/zod4'
 import { onError } from '@orpc/server'
-import { todoRouter } from '@/features/todos/api/router'
+import { router } from '@/server/router'
 
-const openAPIHandler = new OpenAPIHandler(todoRouter, {
+
+const openAPIHandler = new OpenAPIHandler(router, {
   interceptors: [
     onError((error) => {
       console.error(error)
@@ -28,7 +29,7 @@ const openAPIHandler = new OpenAPIHandler(todoRouter, {
 
 async function handleRequest(request: Request) {
   const { response } = await openAPIHandler.handle(request, {
-    prefix: '/api/orpc',
+    prefix: '/api',
   })
 
   return response ?? new Response('Not found', { status: 404 })
