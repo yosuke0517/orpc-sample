@@ -1,9 +1,8 @@
 import { OpenAPIHandler } from '@orpc/openapi/fetch'
 import { OpenAPIReferencePlugin } from '@orpc/openapi/plugins'
-import { ZodToJsonSchemaConverter } from '@orpc/zod/zod4'
 import { onError } from '@orpc/server'
+import { ZodToJsonSchemaConverter } from '@orpc/zod/zod4'
 import { router } from '@/server/router'
-
 
 const openAPIHandler = new OpenAPIHandler(router, {
   interceptors: [

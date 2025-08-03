@@ -9,8 +9,8 @@ class TodoStore {
       FROM todos 
       ORDER BY created_at DESC
     `)
-    
-    return result.rows.map(row => ({
+
+    return result.rows.map((row) => ({
       id: row.id,
       title: row.title,
       description: row.description || undefined,
@@ -21,14 +21,17 @@ class TodoStore {
   }
 
   async getById(id: string): Promise<Todo | null> {
-    const result = await db.query(`
+    const result = await db.query(
+      `
       SELECT id, title, description, completed, created_at, updated_at 
       FROM todos 
       WHERE id = $1
-    `, [id])
-    
+    `,
+      [id]
+    )
+
     if (result.rows.length === 0) return null
-    
+
     const row = result.rows[0]
     return {
       id: row.id,
@@ -41,12 +44,15 @@ class TodoStore {
   }
 
   async create(input: CreateTodoInput): Promise<Todo> {
-    const result = await db.query(`
+    const result = await db.query(
+      `
       INSERT INTO todos (title, description) 
       VALUES ($1, $2) 
       RETURNING id, title, description, completed, created_at, updated_at
-    `, [input.title, input.description || null])
-    
+    `,
+      [input.title, input.description || null]
+    )
+
     const row = result.rows[0]
     return {
       id: row.id,
@@ -86,16 +92,19 @@ class TodoStore {
     }
 
     values.push(id)
-    
-    const result = await db.query(`
+
+    const result = await db.query(
+      `
       UPDATE todos 
       SET ${updates.join(', ')}
       WHERE id = $${paramCount}
       RETURNING id, title, description, completed, created_at, updated_at
-    `, values)
-    
+    `,
+      values
+    )
+
     if (result.rows.length === 0) return null
-    
+
     const row = result.rows[0]
     return {
       id: row.id,

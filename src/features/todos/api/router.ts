@@ -1,9 +1,6 @@
 import { z } from 'zod'
 import { orpcServer } from '@/lib/orpc/server'
-import { 
-  CreateTodoSchema, 
-  UpdateTodoSchema,
-} from '../types/todo'
+import { CreateTodoSchema, UpdateTodoSchema } from '../types/todo'
 import { todoStore } from './store'
 
 // Todo CRUD APIルーターの定義
@@ -17,12 +14,10 @@ export const todoRouter = {
   todos: {
     // 全てのTodoを取得
     // TODO: 認証必須 + ユーザー固有のTodoのみ返却
-    list: orpcServer
-      .input(z.object({}))
-      .handler(async () => {
-        // TODO: 認証チェック + where: { userId: session.userId }
-        return await todoStore.getAll()
-      }),
+    list: orpcServer.input(z.object({})).handler(async () => {
+      // TODO: 認証チェック + where: { userId: session.userId }
+      return await todoStore.getAll()
+    }),
 
     // IDでTodoを取得
     // TODO: 認証必須 + 所有権チェック
@@ -35,20 +30,20 @@ export const todoRouter = {
 
     // 新しいTodoを作成
     // TODO: 認証必須 + ユーザーIDの自動設定
-    create: orpcServer
-      .input(CreateTodoSchema)
-      .handler(async ({ input }) => {
-        // TODO: 認証チェック + input.userId = session.userId
-        return await todoStore.create(input)
-      }),
+    create: orpcServer.input(CreateTodoSchema).handler(async ({ input }) => {
+      // TODO: 認証チェック + input.userId = session.userId
+      return await todoStore.create(input)
+    }),
 
     // Todoを更新
     // TODO: 認証必須 + 所有権チェック
     update: orpcServer
-      .input(z.object({
-        id: z.string().min(1),
-        data: UpdateTodoSchema,
-      }))
+      .input(
+        z.object({
+          id: z.string().min(1),
+          data: UpdateTodoSchema,
+        })
+      )
       .handler(async ({ input }) => {
         // TODO: 認証チェック + 所有権確認 (todo.userId === session.userId)
         return await todoStore.update(input.id, input.data)
@@ -72,12 +67,12 @@ export const todoRouter = {
         // TODO: 認証チェック + 所有権確認
         const todo = await todoStore.getById(input.id)
         if (!todo) return null
-        
+
         return await todoStore.update(input.id, {
           completed: !todo.completed,
         })
       }),
-  }
+  },
 }
 
 // ルーターの型をエクスポート
