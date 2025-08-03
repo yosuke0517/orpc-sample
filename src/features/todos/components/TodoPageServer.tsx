@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
-import { fetchTodos, getTodoStats } from '@/features/todos/services/todoService'
+import { calculateTodoStats } from '@/features/todos/helpers/todoHelpers'
+import { fetchTodosServer } from '@/features/todos/services/serverTodoService'
 import { TodoPageClient } from './TodoPageClient'
 import { TodoSkeleton } from './TodoSkeleton'
 
@@ -14,8 +15,8 @@ import { TodoSkeleton } from './TodoSkeleton'
  */
 export async function TodoPageServer() {
   // Fetch todos on the server for better performance and SEO
-  const todos = await fetchTodos()
-  const stats = await getTodoStats(todos)
+  const todos = await fetchTodosServer()
+  const stats = calculateTodoStats(todos)
 
   return (
     <div className="min-h-screen bg-gray-50">

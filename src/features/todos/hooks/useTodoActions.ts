@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 import { useCallback } from 'react'
+import { calculateExtendedTodoStats } from '@/features/todos/helpers/todoHelpers'
 import type {
   CreateTodoInput,
   UpdateTodoInput,
@@ -160,18 +161,5 @@ export function useTodoActions() {
  * Provides computed values based on todo list
  */
 export function useTodoStats(todos: Array<{ completed: boolean }>) {
-  const total = todos.length
-  const completed = todos.filter((todo) => todo.completed).length
-  const pending = total - completed
-  const completionRate = total > 0 ? Math.round((completed / total) * 100) : 0
-
-  return {
-    total,
-    completed,
-    pending,
-    completionRate,
-    hasCompletedTodos: completed > 0,
-    hasPendingTodos: pending > 0,
-    isAllCompleted: total > 0 && completed === total,
-  }
+  return calculateExtendedTodoStats(todos)
 }

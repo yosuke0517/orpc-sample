@@ -96,9 +96,9 @@ export function TodoListSkeleton() {
 
       <div className="p-6">
         <div className="space-y-4">
-          {Array.from({ length: 3 }).map((_, index) => (
-            <TodoItemSkeleton key={`skeleton-${index}`} />
-          ))}
+          <TodoItemSkeleton key="skeleton-item-1" />
+          <TodoItemSkeleton key="skeleton-item-2" />
+          <TodoItemSkeleton key="skeleton-item-3" />
         </div>
       </div>
     </div>
