@@ -1,8 +1,8 @@
 import { Suspense } from 'react'
 import {
   TodoPageLoading,
-  TodoPageServer,
-} from '@/features/todos/components/TodoPageServer'
+  TodoPage,
+} from '@/features/todos/components/TodoPage'
 
 /**
  * Main page component - Server Component for better performance
@@ -16,7 +16,7 @@ import {
 export default function HomePage() {
   return (
     <Suspense fallback={<TodoPageLoading />}>
-      <TodoPageServer />
+      <TodoPage />
     </Suspense>
   )
 }

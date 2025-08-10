@@ -3,7 +3,6 @@
 import { useOptimistic, useState, useTransition } from 'react'
 import { TodoFilters } from '@/features/todos/components/todoFilters'
 import { TodoForm } from '@/features/todos/components/todoForm'
-import { TodoList } from '@/features/todos/components/todoList'
 import { useTodoActions } from '@/features/todos/hooks/useTodoActions'
 import type {
   CreateTodoInput,
@@ -11,8 +10,9 @@ import type {
   TodoFilter,
   UpdateTodoInput,
 } from '@/features/todos/types/todo'
+import { TodoList } from './todoList'
 
-type TodoPageClientProps = {
+type TodoListProps = {
   initialTodos: Todo[]
 }
 
@@ -20,7 +20,7 @@ type TodoPageClientProps = {
  * Client Component for Todo Page
  * Handles user interactions, optimistic updates, and client-side state
  */
-export function TodoPageClient({ initialTodos }: TodoPageClientProps) {
+export function TodoPageClient({ initialTodos }: TodoListProps) {
   // Client-side state management
   const [filter, setFilter] = useState<TodoFilter>({})
   const [isPending, startTransition] = useTransition()
@@ -77,7 +77,7 @@ export function TodoPageClient({ initialTodos }: TodoPageClientProps) {
       const optimisticTodo: Todo = {
         id: `temp-${Date.now()}`, // Temporary ID
         title: data.title,
-        description: data.description,
+        description: data.description || null,
         completed: false,
         createdAt: new Date(),
         updatedAt: new Date(),

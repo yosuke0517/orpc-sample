@@ -2,10 +2,10 @@ import { todoRouter } from '@/features/todos/api/router'
 
 // 中央ルーター：全てのfeatureのルーターを統合
 export const router = {
-  ...todoRouter,
+  todos: todoRouter.todos,
   // 将来的に他のfeatureのルーターもここに追加
-  // ...userRouter,
-  // ...authRouter,
+  // user: userRouter.user,
+  // auth: authRouter.auth,
   // ...etc
 }
 

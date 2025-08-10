@@ -21,24 +21,15 @@ export function useTodoActions() {
    */
   const createTodo = useCallback(
     async (data: CreateTodoInput): Promise<void> => {
-      const response = await fetch('/api/todos/create', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}))
+      try {
+        const { createTodoAction } = await import('@/features/todos/actions/todoActions')
+        await createTodoAction(data)
+        router.refresh()
+      } catch (error) {
         throw new Error(
-          errorData.message || `Failed to create todo: ${response.status}`
+          error instanceof Error ? error.message : 'Failed to create todo'
         )
       }
-
-      // Refresh the page to get updated data from server
-      // This ensures data consistency and leverages Next.js caching
-      router.refresh()
     },
     [router]
   )

@@ -1,6 +1,7 @@
+import { createRouterClient } from '@orpc/server'
 import { Suspense } from 'react'
 import { calculateTodoStats } from '@/features/todos/helpers/todoHelpers'
-import { fetchTodosServer } from '@/features/todos/services/serverTodoService'
+import { router } from '@/server/router'
 import { TodoPageClient } from './TodoPageClient'
 import { TodoSkeleton } from './TodoSkeleton'
 
@@ -13,9 +14,10 @@ import { TodoSkeleton } from './TodoSkeleton'
  * Main server component that fetches initial data
  * This component runs on the server and provides SSR benefits
  */
-export async function TodoPageServer() {
+export async function TodoPage() {
   // Fetch todos on the server for better performance and SEO
-  const todos = await fetchTodosServer()
+  const orpcClient = createRouterClient(router)
+  const todos = await orpcClient.todos.list({})
   const stats = calculateTodoStats(todos)
 
   return (
