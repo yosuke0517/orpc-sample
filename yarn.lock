@@ -923,14 +923,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@napi-rs/wasm-runtime@npm:^1.0.5":
-  version: 1.0.5
-  resolution: "@napi-rs/wasm-runtime@npm:1.0.5"
+"@napi-rs/wasm-runtime@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "@napi-rs/wasm-runtime@npm:1.0.7"
   dependencies:
     "@emnapi/core": "npm:^1.5.0"
     "@emnapi/runtime": "npm:^1.5.0"
     "@tybys/wasm-util": "npm:^0.10.1"
-  checksum: 10c0/8d29299933c57b6ead61f46fad5c3dfabc31e1356bbaf25c3a8ae57be0af0db0006a808f2c1bb16e28925e027f20e0856550dac94e015f56dd6ed53b38f9a385
+  checksum: 10c0/2d8635498136abb49d6dbf7395b78c63422292240963bf055f307b77aeafbde57ae2c0ceaaef215601531b36d6eb92a2cdd6f5ba90ed2aa8127c27aff9c4ae55
   languageName: node
   linkType: hard
 
@@ -1062,91 +1062,91 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@orpc/client@npm:1.9.4, @orpc/client@npm:^1.7.8":
-  version: 1.9.4
-  resolution: "@orpc/client@npm:1.9.4"
+"@orpc/client@npm:1.10.0, @orpc/client@npm:^1.7.8":
+  version: 1.10.0
+  resolution: "@orpc/client@npm:1.10.0"
   dependencies:
-    "@orpc/shared": "npm:1.9.4"
-    "@orpc/standard-server": "npm:1.9.4"
-    "@orpc/standard-server-fetch": "npm:1.9.4"
-    "@orpc/standard-server-peer": "npm:1.9.4"
-  checksum: 10c0/98c2c2b48eaee30e0522b19c0819e1ab834caac367eca15eab613cd23e541e999d3ee9059f569acbe1a1877a10df69f2a5d88bffe6d2edef5aac8ca96e047bf5
+    "@orpc/shared": "npm:1.10.0"
+    "@orpc/standard-server": "npm:1.10.0"
+    "@orpc/standard-server-fetch": "npm:1.10.0"
+    "@orpc/standard-server-peer": "npm:1.10.0"
+  checksum: 10c0/ca051b41c8112152c949ed9804a3285668679a2b421fba5edd295bc2a90f3903ae24da62374f213058e04b5aa7568fff5bace26b5908b3bbdcfd94ef8c6e4f5c
   languageName: node
   linkType: hard
 
-"@orpc/contract@npm:1.9.4, @orpc/contract@npm:^1.7.8":
-  version: 1.9.4
-  resolution: "@orpc/contract@npm:1.9.4"
+"@orpc/contract@npm:1.10.0, @orpc/contract@npm:^1.7.8":
+  version: 1.10.0
+  resolution: "@orpc/contract@npm:1.10.0"
   dependencies:
-    "@orpc/client": "npm:1.9.4"
-    "@orpc/shared": "npm:1.9.4"
+    "@orpc/client": "npm:1.10.0"
+    "@orpc/shared": "npm:1.10.0"
     "@standard-schema/spec": "npm:^1.0.0"
     openapi-types: "npm:^12.1.3"
-  checksum: 10c0/d36b28d2cf10c18730299899a959f69a3106fbd4a86b67911e47104a1e3f6be30b2d02c7fd96b760a70c7a75051dc930af5ad983595ca6f306906ac032dcd913
+  checksum: 10c0/34f6adecf387d7d1595968829c6c16dd8d7e9e75808e0e47cdfde9dcf5a527dd4db6803587c316b33ab615d635e1b5113f524d22f09f2c13f139926119991e06
   languageName: node
   linkType: hard
 
-"@orpc/interop@npm:1.9.4":
-  version: 1.9.4
-  resolution: "@orpc/interop@npm:1.9.4"
-  checksum: 10c0/62d773ed5415e395a8703e294d632e98d9ad658acaee577e310eefad16698e6de6e607f09c2985009fd3046bf0f172f8fe1464c7445143366fc82a23e314659e
+"@orpc/interop@npm:1.10.0":
+  version: 1.10.0
+  resolution: "@orpc/interop@npm:1.10.0"
+  checksum: 10c0/6e9fd90ed426b9c2c40b1de0ee526cf2643bd92f38747f1f0837aba37ff261e82298dfd44ef049767cbc542a76eab0a88e474cb44fd8eabc35f7ed83d7cecccf
   languageName: node
   linkType: hard
 
-"@orpc/json-schema@npm:1.9.4":
-  version: 1.9.4
-  resolution: "@orpc/json-schema@npm:1.9.4"
+"@orpc/json-schema@npm:1.10.0":
+  version: 1.10.0
+  resolution: "@orpc/json-schema@npm:1.10.0"
   dependencies:
-    "@orpc/contract": "npm:1.9.4"
-    "@orpc/interop": "npm:1.9.4"
-    "@orpc/openapi": "npm:1.9.4"
-    "@orpc/server": "npm:1.9.4"
-    "@orpc/shared": "npm:1.9.4"
-  checksum: 10c0/735bb5d669cfdcc7dd15ebf28f2b04a04169ad4b5c6a96a5b7a7131e1266a4081b1f86f1046b0069d30f2175a799048020fd737dad514017374a95c4c4fda4cb
+    "@orpc/contract": "npm:1.10.0"
+    "@orpc/interop": "npm:1.10.0"
+    "@orpc/openapi": "npm:1.10.0"
+    "@orpc/server": "npm:1.10.0"
+    "@orpc/shared": "npm:1.10.0"
+  checksum: 10c0/c5e0910f1e1a558d677bc0ad4246af8d24b644791fe278330c78f42c1dc4c6fc219f07743de75244ba2e9b8fb190f88060b6b16289fbcc5c23be8ba0868c7741
   languageName: node
   linkType: hard
 
-"@orpc/openapi-client@npm:1.9.4":
-  version: 1.9.4
-  resolution: "@orpc/openapi-client@npm:1.9.4"
+"@orpc/openapi-client@npm:1.10.0":
+  version: 1.10.0
+  resolution: "@orpc/openapi-client@npm:1.10.0"
   dependencies:
-    "@orpc/client": "npm:1.9.4"
-    "@orpc/contract": "npm:1.9.4"
-    "@orpc/shared": "npm:1.9.4"
-    "@orpc/standard-server": "npm:1.9.4"
-  checksum: 10c0/4a027e6181a9280294f63661de4724f26d775528132f1481f6c761a9cf7ab47eca38567d111b392e34355cd0aca930e727a1b87bd929c779578be81149b5d62e
+    "@orpc/client": "npm:1.10.0"
+    "@orpc/contract": "npm:1.10.0"
+    "@orpc/shared": "npm:1.10.0"
+    "@orpc/standard-server": "npm:1.10.0"
+  checksum: 10c0/d0041d58e7132818c22d4f506dde3e639d0485317756de770a403ae8d2a8da9a113ed061972d8ef93419c973a0d756b98222ceec21c17a43d0cb5ef9d812c187
   languageName: node
   linkType: hard
 
-"@orpc/openapi@npm:1.9.4, @orpc/openapi@npm:^1.7.8":
-  version: 1.9.4
-  resolution: "@orpc/openapi@npm:1.9.4"
+"@orpc/openapi@npm:1.10.0, @orpc/openapi@npm:^1.7.8":
+  version: 1.10.0
+  resolution: "@orpc/openapi@npm:1.10.0"
   dependencies:
-    "@orpc/client": "npm:1.9.4"
-    "@orpc/contract": "npm:1.9.4"
-    "@orpc/interop": "npm:1.9.4"
-    "@orpc/openapi-client": "npm:1.9.4"
-    "@orpc/server": "npm:1.9.4"
-    "@orpc/shared": "npm:1.9.4"
-    "@orpc/standard-server": "npm:1.9.4"
+    "@orpc/client": "npm:1.10.0"
+    "@orpc/contract": "npm:1.10.0"
+    "@orpc/interop": "npm:1.10.0"
+    "@orpc/openapi-client": "npm:1.10.0"
+    "@orpc/server": "npm:1.10.0"
+    "@orpc/shared": "npm:1.10.0"
+    "@orpc/standard-server": "npm:1.10.0"
     rou3: "npm:^0.7.7"
-  checksum: 10c0/5a58798725afdc37a3a34fdb669cef0c525b93b4df2e12e30665e261a5bf32ca7cb50477eb9a95b847944d08aabcaf8566bd987ce6c7bb58cf09b597191a6cbc
+  checksum: 10c0/854334a212c6db7808852310dd8d66dab6a875e27cc4fa4a14444a7e30f4a1def228b47488e80de2e91ef10627d22f7f6da9b0fc6bc90dad63d3ebceb8cbdbf8
   languageName: node
   linkType: hard
 
-"@orpc/server@npm:1.9.4, @orpc/server@npm:^1.7.8":
-  version: 1.9.4
-  resolution: "@orpc/server@npm:1.9.4"
+"@orpc/server@npm:1.10.0, @orpc/server@npm:^1.7.8":
+  version: 1.10.0
+  resolution: "@orpc/server@npm:1.10.0"
   dependencies:
-    "@orpc/client": "npm:1.9.4"
-    "@orpc/contract": "npm:1.9.4"
-    "@orpc/interop": "npm:1.9.4"
-    "@orpc/shared": "npm:1.9.4"
-    "@orpc/standard-server": "npm:1.9.4"
-    "@orpc/standard-server-aws-lambda": "npm:1.9.4"
-    "@orpc/standard-server-fetch": "npm:1.9.4"
-    "@orpc/standard-server-node": "npm:1.9.4"
-    "@orpc/standard-server-peer": "npm:1.9.4"
+    "@orpc/client": "npm:1.10.0"
+    "@orpc/contract": "npm:1.10.0"
+    "@orpc/interop": "npm:1.10.0"
+    "@orpc/shared": "npm:1.10.0"
+    "@orpc/standard-server": "npm:1.10.0"
+    "@orpc/standard-server-aws-lambda": "npm:1.10.0"
+    "@orpc/standard-server-fetch": "npm:1.10.0"
+    "@orpc/standard-server-node": "npm:1.10.0"
+    "@orpc/standard-server-peer": "npm:1.10.0"
     cookie: "npm:^1.0.2"
   peerDependencies:
     crossws: ">=0.3.4"
@@ -1156,13 +1156,13 @@ __metadata:
       optional: true
     ws:
       optional: true
-  checksum: 10c0/8964fab5d2d1c28b90ff7c6787b2afc260c7c4005b8151f125848fe6ba383cf194714dc3f342ee89a2fc485bccd1abaea7d623a784365ebcb39a04f6667ac5db
+  checksum: 10c0/c6e72ded82a4f887bac7526efe5b7882352b01b7dbf5434777169895b5da9201a28c9da9874e1c471eaf9adbb4d47c383ae7912bbe9811bab816ab64c2bbd3dd
   languageName: node
   linkType: hard
 
-"@orpc/shared@npm:1.9.4":
-  version: 1.9.4
-  resolution: "@orpc/shared@npm:1.9.4"
+"@orpc/shared@npm:1.10.0":
+  version: 1.10.0
+  resolution: "@orpc/shared@npm:1.10.0"
   dependencies:
     radash: "npm:^12.1.1"
     type-fest: "npm:^5.1.0"
@@ -1171,76 +1171,76 @@ __metadata:
   peerDependenciesMeta:
     "@opentelemetry/api":
       optional: true
-  checksum: 10c0/754f4a5d4c4996c04b5931577ac4b3aeb947ec83b9692ff99e89054336dd3867c9306caea948cd6f76f744268227d471379ebc0f3e38d11512d603c172617201
+  checksum: 10c0/ea1368b69e1847a59058059fda0c757f196418e00632123dcdb04e1af49dc08f7072cb3a6b76c5fd4779dc5a5863ae4236aab41f79c5465c79ad5cf532e390a9
   languageName: node
   linkType: hard
 
-"@orpc/standard-server-aws-lambda@npm:1.9.4":
-  version: 1.9.4
-  resolution: "@orpc/standard-server-aws-lambda@npm:1.9.4"
+"@orpc/standard-server-aws-lambda@npm:1.10.0":
+  version: 1.10.0
+  resolution: "@orpc/standard-server-aws-lambda@npm:1.10.0"
   dependencies:
-    "@orpc/shared": "npm:1.9.4"
-    "@orpc/standard-server": "npm:1.9.4"
-    "@orpc/standard-server-fetch": "npm:1.9.4"
-    "@orpc/standard-server-node": "npm:1.9.4"
-  checksum: 10c0/15337224686ff4e3705ac9594416262aaa1ce8be90df2171998ec839d4e00beefd594a067fdff7b6d68099da1eae02cb2a066f8deba3d750431c543a18349f52
+    "@orpc/shared": "npm:1.10.0"
+    "@orpc/standard-server": "npm:1.10.0"
+    "@orpc/standard-server-fetch": "npm:1.10.0"
+    "@orpc/standard-server-node": "npm:1.10.0"
+  checksum: 10c0/05ed7a47ccc4162ae350c724e2a000e01c821221b99071c4d5b999f632db529ce2d74b40a371364c027a1f2704210927f32d03ab670cc50a3c8444465bb79ca6
   languageName: node
   linkType: hard
 
-"@orpc/standard-server-fetch@npm:1.9.4":
-  version: 1.9.4
-  resolution: "@orpc/standard-server-fetch@npm:1.9.4"
+"@orpc/standard-server-fetch@npm:1.10.0":
+  version: 1.10.0
+  resolution: "@orpc/standard-server-fetch@npm:1.10.0"
   dependencies:
-    "@orpc/shared": "npm:1.9.4"
-    "@orpc/standard-server": "npm:1.9.4"
-  checksum: 10c0/0fc5f15bd7f434fd04f23c1d37a3bcc6a3693906ec33502a1ee21466cdc6d7d16f2408533879148cc1f94bc7ff5596f6f4788c49a40cc53923b4c302dd36bf57
+    "@orpc/shared": "npm:1.10.0"
+    "@orpc/standard-server": "npm:1.10.0"
+  checksum: 10c0/4751fc457617d41b679cb8ba17ee9cce86e09af9f5a77060486cc0b54952c9e1e236426f54aadce983ede5d865a112152904e26a193bc3b0090f51c9a68bfdbc
   languageName: node
   linkType: hard
 
-"@orpc/standard-server-node@npm:1.9.4":
-  version: 1.9.4
-  resolution: "@orpc/standard-server-node@npm:1.9.4"
+"@orpc/standard-server-node@npm:1.10.0":
+  version: 1.10.0
+  resolution: "@orpc/standard-server-node@npm:1.10.0"
   dependencies:
-    "@orpc/shared": "npm:1.9.4"
-    "@orpc/standard-server": "npm:1.9.4"
-    "@orpc/standard-server-fetch": "npm:1.9.4"
-  checksum: 10c0/811f7f31a642129c104f968a5901944c0d9de21f35c888e7bc8603094ffa4b34abb1f9844fb8a377c4da9da2bd7b07491e419dfac51bc48fa3e9a460978c7185
+    "@orpc/shared": "npm:1.10.0"
+    "@orpc/standard-server": "npm:1.10.0"
+    "@orpc/standard-server-fetch": "npm:1.10.0"
+  checksum: 10c0/3da9ef99f396140d8f7b19251342318b3180f900958af6867d3bbb8aa4f7c41ac3b85dcd7ccffcd265d8399ec11aa608f6a7e4470a55f4cde8bb410ade99749d
   languageName: node
   linkType: hard
 
-"@orpc/standard-server-peer@npm:1.9.4":
-  version: 1.9.4
-  resolution: "@orpc/standard-server-peer@npm:1.9.4"
+"@orpc/standard-server-peer@npm:1.10.0":
+  version: 1.10.0
+  resolution: "@orpc/standard-server-peer@npm:1.10.0"
   dependencies:
-    "@orpc/shared": "npm:1.9.4"
-    "@orpc/standard-server": "npm:1.9.4"
-  checksum: 10c0/ab32cff9ccef02d7e469bd848a8562dbc6066ca24d58d28a26a3203cabb0d7c4abb99c2cb41d1f63a8d683366e653276e872037bfd6f03da0b4ea70e1275d14b
+    "@orpc/shared": "npm:1.10.0"
+    "@orpc/standard-server": "npm:1.10.0"
+  checksum: 10c0/0a01c8fcd80800c86cee15fb25ebb928f29d41b1d7ecbc10ecae4008f6e4fe603b0f8af4b5f99a4d8b58dc9cb4633475b43a447b5581d02262609cd1421f182d
   languageName: node
   linkType: hard
 
-"@orpc/standard-server@npm:1.9.4":
-  version: 1.9.4
-  resolution: "@orpc/standard-server@npm:1.9.4"
+"@orpc/standard-server@npm:1.10.0":
+  version: 1.10.0
+  resolution: "@orpc/standard-server@npm:1.10.0"
   dependencies:
-    "@orpc/shared": "npm:1.9.4"
-  checksum: 10c0/915e23de883517844a9062a5f232dc0cbf3ec84e474fe8c1000040f20824389117f7e9358b4d553ea0be367051de6b6221d3f310c5783a1d505e4e009fbc5ee0
+    "@orpc/shared": "npm:1.10.0"
+  checksum: 10c0/5e5f22270787cc167b755e4116dc9ac4b414d5a0c5738549f8d729853f9e46f08658de2ad3e73b5de570cfa5e8c8f6fa8c08ef9fcc6d8b238ba20248863411ea
   languageName: node
   linkType: hard
 
 "@orpc/zod@npm:^1.7.8":
-  version: 1.9.4
-  resolution: "@orpc/zod@npm:1.9.4"
+  version: 1.10.0
+  resolution: "@orpc/zod@npm:1.10.0"
   dependencies:
-    "@orpc/json-schema": "npm:1.9.4"
-    "@orpc/openapi": "npm:1.9.4"
-    "@orpc/shared": "npm:1.9.4"
+    "@orpc/json-schema": "npm:1.10.0"
+    "@orpc/openapi": "npm:1.10.0"
+    "@orpc/shared": "npm:1.10.0"
     escape-string-regexp: "npm:^5.0.0"
     wildcard-match: "npm:^5.1.3"
   peerDependencies:
-    "@orpc/contract": 1.9.4
-    "@orpc/server": 1.9.4
+    "@orpc/contract": 1.10.0
+    "@orpc/server": 1.10.0
     zod: ">=3.25.0"
-  checksum: 10c0/118d7e4352482117d56299455fabe987a40a2c969092c53cee596df502facb091b2d137922c66cebe556b2dbc613f393c9eee753e5f52df8db801116d85cdb2b
+  checksum: 10c0/ab71cef82f069d86c116bd69f869afe5379c6cd1ed11fe18bf016ad5999780521387098ab6a2458d2350b0b5f59a088661a1fb848b3e9f6e929a22c328f7dd3a
   languageName: node
   linkType: hard
 
@@ -1281,130 +1281,128 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/node@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/node@npm:4.1.14"
+"@tailwindcss/node@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/node@npm:4.1.15"
   dependencies:
     "@jridgewell/remapping": "npm:^2.3.4"
     enhanced-resolve: "npm:^5.18.3"
     jiti: "npm:^2.6.0"
-    lightningcss: "npm:1.30.1"
+    lightningcss: "npm:1.30.2"
     magic-string: "npm:^0.30.19"
     source-map-js: "npm:^1.2.1"
-    tailwindcss: "npm:4.1.14"
-  checksum: 10c0/dcdb53217534b5220e8ffd0357848b542935aa5ebcae691ff1ac2924c5c0b89d6150d938ff69c776d9835e53fdb29b6db78367930985bd50b367ddb646778239
+    tailwindcss: "npm:4.1.15"
+  checksum: 10c0/2bf8a04c7cb480bd7e41c75228b50ba020705653ef92b4bb2463488dc7a1d3e6c8e9c8d3a0780adb98640ac9ea705106f824f6d2b4c6e3f7205f5eec08af4b74
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-android-arm64@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/oxide-android-arm64@npm:4.1.14"
+"@tailwindcss/oxide-android-arm64@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/oxide-android-arm64@npm:4.1.15"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-darwin-arm64@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/oxide-darwin-arm64@npm:4.1.14"
+"@tailwindcss/oxide-darwin-arm64@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/oxide-darwin-arm64@npm:4.1.15"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-darwin-x64@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/oxide-darwin-x64@npm:4.1.14"
+"@tailwindcss/oxide-darwin-x64@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/oxide-darwin-x64@npm:4.1.15"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-freebsd-x64@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/oxide-freebsd-x64@npm:4.1.14"
+"@tailwindcss/oxide-freebsd-x64@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/oxide-freebsd-x64@npm:4.1.15"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-linux-arm-gnueabihf@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/oxide-linux-arm-gnueabihf@npm:4.1.14"
+"@tailwindcss/oxide-linux-arm-gnueabihf@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/oxide-linux-arm-gnueabihf@npm:4.1.15"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-linux-arm64-gnu@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/oxide-linux-arm64-gnu@npm:4.1.14"
+"@tailwindcss/oxide-linux-arm64-gnu@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/oxide-linux-arm64-gnu@npm:4.1.15"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-linux-arm64-musl@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/oxide-linux-arm64-musl@npm:4.1.14"
+"@tailwindcss/oxide-linux-arm64-musl@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/oxide-linux-arm64-musl@npm:4.1.15"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-linux-x64-gnu@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/oxide-linux-x64-gnu@npm:4.1.14"
+"@tailwindcss/oxide-linux-x64-gnu@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/oxide-linux-x64-gnu@npm:4.1.15"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-linux-x64-musl@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/oxide-linux-x64-musl@npm:4.1.14"
+"@tailwindcss/oxide-linux-x64-musl@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/oxide-linux-x64-musl@npm:4.1.15"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-wasm32-wasi@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/oxide-wasm32-wasi@npm:4.1.14"
+"@tailwindcss/oxide-wasm32-wasi@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/oxide-wasm32-wasi@npm:4.1.15"
   dependencies:
     "@emnapi/core": "npm:^1.5.0"
     "@emnapi/runtime": "npm:^1.5.0"
     "@emnapi/wasi-threads": "npm:^1.1.0"
-    "@napi-rs/wasm-runtime": "npm:^1.0.5"
+    "@napi-rs/wasm-runtime": "npm:^1.0.7"
     "@tybys/wasm-util": "npm:^0.10.1"
     tslib: "npm:^2.4.0"
   conditions: cpu=wasm32
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-win32-arm64-msvc@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/oxide-win32-arm64-msvc@npm:4.1.14"
+"@tailwindcss/oxide-win32-arm64-msvc@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/oxide-win32-arm64-msvc@npm:4.1.15"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide-win32-x64-msvc@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/oxide-win32-x64-msvc@npm:4.1.14"
+"@tailwindcss/oxide-win32-x64-msvc@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/oxide-win32-x64-msvc@npm:4.1.15"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@tailwindcss/oxide@npm:4.1.14":
-  version: 4.1.14
-  resolution: "@tailwindcss/oxide@npm:4.1.14"
+"@tailwindcss/oxide@npm:4.1.15":
+  version: 4.1.15
+  resolution: "@tailwindcss/oxide@npm:4.1.15"
   dependencies:
-    "@tailwindcss/oxide-android-arm64": "npm:4.1.14"
-    "@tailwindcss/oxide-darwin-arm64": "npm:4.1.14"
-    "@tailwindcss/oxide-darwin-x64": "npm:4.1.14"
-    "@tailwindcss/oxide-freebsd-x64": "npm:4.1.14"
-    "@tailwindcss/oxide-linux-arm-gnueabihf": "npm:4.1.14"
-    "@tailwindcss/oxide-linux-arm64-gnu": "npm:4.1.14"
-    "@tailwindcss/oxide-linux-arm64-musl": "npm:4.1.14"
-    "@tailwindcss/oxide-linux-x64-gnu": "npm:4.1.14"
-    "@tailwindcss/oxide-linux-x64-musl": "npm:4.1.14"
-    "@tailwindcss/oxide-wasm32-wasi": "npm:4.1.14"
-    "@tailwindcss/oxide-win32-arm64-msvc": "npm:4.1.14"
-    "@tailwindcss/oxide-win32-x64-msvc": "npm:4.1.14"
-    detect-libc: "npm:^2.0.4"
-    tar: "npm:^7.5.1"
+    "@tailwindcss/oxide-android-arm64": "npm:4.1.15"
+    "@tailwindcss/oxide-darwin-arm64": "npm:4.1.15"
+    "@tailwindcss/oxide-darwin-x64": "npm:4.1.15"
+    "@tailwindcss/oxide-freebsd-x64": "npm:4.1.15"
+    "@tailwindcss/oxide-linux-arm-gnueabihf": "npm:4.1.15"
+    "@tailwindcss/oxide-linux-arm64-gnu": "npm:4.1.15"
+    "@tailwindcss/oxide-linux-arm64-musl": "npm:4.1.15"
+    "@tailwindcss/oxide-linux-x64-gnu": "npm:4.1.15"
+    "@tailwindcss/oxide-linux-x64-musl": "npm:4.1.15"
+    "@tailwindcss/oxide-wasm32-wasi": "npm:4.1.15"
+    "@tailwindcss/oxide-win32-arm64-msvc": "npm:4.1.15"
+    "@tailwindcss/oxide-win32-x64-msvc": "npm:4.1.15"
   dependenciesMeta:
     "@tailwindcss/oxide-android-arm64":
       optional: true
@@ -1430,20 +1428,20 @@ __metadata:
       optional: true
     "@tailwindcss/oxide-win32-x64-msvc":
       optional: true
-  checksum: 10c0/7fdf5345272d0348624cd003f431f10715372d585f0180d32d3c8dd18f5417cdfe7e8c4e86fc504fa1aefd19324fb4c4b174bbefdc054882ae6919ed1160d86c
+  checksum: 10c0/81b3f5f0029d1b9e97bd0472449fad406f654d1471888d2bd8d9a645f1f253416bf804a5b3a42cf4087f3f85defe0e7a432f6b37791bed2a623b02795a1db450
   languageName: node
   linkType: hard
 
 "@tailwindcss/postcss@npm:^4":
-  version: 4.1.14
-  resolution: "@tailwindcss/postcss@npm:4.1.14"
+  version: 4.1.15
+  resolution: "@tailwindcss/postcss@npm:4.1.15"
   dependencies:
     "@alloc/quick-lru": "npm:^5.2.0"
-    "@tailwindcss/node": "npm:4.1.14"
-    "@tailwindcss/oxide": "npm:4.1.14"
+    "@tailwindcss/node": "npm:4.1.15"
+    "@tailwindcss/oxide": "npm:4.1.15"
     postcss: "npm:^8.4.41"
-    tailwindcss: "npm:4.1.14"
-  checksum: 10c0/f1befe8b92ed7c162328fe359f9c118ba7edbd37e32e0d62956aed9c7891d1107c70c2dfb4dc4fae8c5acd5442529851d3762549974c973b3c4ef6c043444c03
+    tailwindcss: "npm:4.1.15"
+  checksum: 10c0/3e8d6a9371e3e4f280fbdd67c8bafd7fa6bf708e5e49e2cb88167372621364ee8db519ca759873e14831982775f3e15c366986bc02aac09acc4e00623d947f54
   languageName: node
   linkType: hard
 
@@ -4139,92 +4137,102 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lightningcss-darwin-arm64@npm:1.30.1":
-  version: 1.30.1
-  resolution: "lightningcss-darwin-arm64@npm:1.30.1"
+"lightningcss-android-arm64@npm:1.30.2":
+  version: 1.30.2
+  resolution: "lightningcss-android-arm64@npm:1.30.2"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"lightningcss-darwin-arm64@npm:1.30.2":
+  version: 1.30.2
+  resolution: "lightningcss-darwin-arm64@npm:1.30.2"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"lightningcss-darwin-x64@npm:1.30.1":
-  version: 1.30.1
-  resolution: "lightningcss-darwin-x64@npm:1.30.1"
+"lightningcss-darwin-x64@npm:1.30.2":
+  version: 1.30.2
+  resolution: "lightningcss-darwin-x64@npm:1.30.2"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"lightningcss-freebsd-x64@npm:1.30.1":
-  version: 1.30.1
-  resolution: "lightningcss-freebsd-x64@npm:1.30.1"
+"lightningcss-freebsd-x64@npm:1.30.2":
+  version: 1.30.2
+  resolution: "lightningcss-freebsd-x64@npm:1.30.2"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"lightningcss-linux-arm-gnueabihf@npm:1.30.1":
-  version: 1.30.1
-  resolution: "lightningcss-linux-arm-gnueabihf@npm:1.30.1"
+"lightningcss-linux-arm-gnueabihf@npm:1.30.2":
+  version: 1.30.2
+  resolution: "lightningcss-linux-arm-gnueabihf@npm:1.30.2"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"lightningcss-linux-arm64-gnu@npm:1.30.1":
-  version: 1.30.1
-  resolution: "lightningcss-linux-arm64-gnu@npm:1.30.1"
+"lightningcss-linux-arm64-gnu@npm:1.30.2":
+  version: 1.30.2
+  resolution: "lightningcss-linux-arm64-gnu@npm:1.30.2"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"lightningcss-linux-arm64-musl@npm:1.30.1":
-  version: 1.30.1
-  resolution: "lightningcss-linux-arm64-musl@npm:1.30.1"
+"lightningcss-linux-arm64-musl@npm:1.30.2":
+  version: 1.30.2
+  resolution: "lightningcss-linux-arm64-musl@npm:1.30.2"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"lightningcss-linux-x64-gnu@npm:1.30.1":
-  version: 1.30.1
-  resolution: "lightningcss-linux-x64-gnu@npm:1.30.1"
+"lightningcss-linux-x64-gnu@npm:1.30.2":
+  version: 1.30.2
+  resolution: "lightningcss-linux-x64-gnu@npm:1.30.2"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"lightningcss-linux-x64-musl@npm:1.30.1":
-  version: 1.30.1
-  resolution: "lightningcss-linux-x64-musl@npm:1.30.1"
+"lightningcss-linux-x64-musl@npm:1.30.2":
+  version: 1.30.2
+  resolution: "lightningcss-linux-x64-musl@npm:1.30.2"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"lightningcss-win32-arm64-msvc@npm:1.30.1":
-  version: 1.30.1
-  resolution: "lightningcss-win32-arm64-msvc@npm:1.30.1"
+"lightningcss-win32-arm64-msvc@npm:1.30.2":
+  version: 1.30.2
+  resolution: "lightningcss-win32-arm64-msvc@npm:1.30.2"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"lightningcss-win32-x64-msvc@npm:1.30.1":
-  version: 1.30.1
-  resolution: "lightningcss-win32-x64-msvc@npm:1.30.1"
+"lightningcss-win32-x64-msvc@npm:1.30.2":
+  version: 1.30.2
+  resolution: "lightningcss-win32-x64-msvc@npm:1.30.2"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"lightningcss@npm:1.30.1":
-  version: 1.30.1
-  resolution: "lightningcss@npm:1.30.1"
+"lightningcss@npm:1.30.2":
+  version: 1.30.2
+  resolution: "lightningcss@npm:1.30.2"
   dependencies:
     detect-libc: "npm:^2.0.3"
-    lightningcss-darwin-arm64: "npm:1.30.1"
-    lightningcss-darwin-x64: "npm:1.30.1"
-    lightningcss-freebsd-x64: "npm:1.30.1"
-    lightningcss-linux-arm-gnueabihf: "npm:1.30.1"
-    lightningcss-linux-arm64-gnu: "npm:1.30.1"
-    lightningcss-linux-arm64-musl: "npm:1.30.1"
-    lightningcss-linux-x64-gnu: "npm:1.30.1"
-    lightningcss-linux-x64-musl: "npm:1.30.1"
-    lightningcss-win32-arm64-msvc: "npm:1.30.1"
-    lightningcss-win32-x64-msvc: "npm:1.30.1"
+    lightningcss-android-arm64: "npm:1.30.2"
+    lightningcss-darwin-arm64: "npm:1.30.2"
+    lightningcss-darwin-x64: "npm:1.30.2"
+    lightningcss-freebsd-x64: "npm:1.30.2"
+    lightningcss-linux-arm-gnueabihf: "npm:1.30.2"
+    lightningcss-linux-arm64-gnu: "npm:1.30.2"
+    lightningcss-linux-arm64-musl: "npm:1.30.2"
+    lightningcss-linux-x64-gnu: "npm:1.30.2"
+    lightningcss-linux-x64-musl: "npm:1.30.2"
+    lightningcss-win32-arm64-msvc: "npm:1.30.2"
+    lightningcss-win32-x64-msvc: "npm:1.30.2"
   dependenciesMeta:
+    lightningcss-android-arm64:
+      optional: true
     lightningcss-darwin-arm64:
       optional: true
     lightningcss-darwin-x64:
@@ -4245,7 +4253,7 @@ __metadata:
       optional: true
     lightningcss-win32-x64-msvc:
       optional: true
-  checksum: 10c0/1e1ad908f3c68bf39d964a6735435a8dd5474fb2765076732d64a7b6aa2af1f084da65a9462443a9adfebf7dcfb02fb532fce1d78697f2a9de29c8f40f09aee3
+  checksum: 10c0/5c0c73a33946dab65908d5cd1325df4efa290efb77f940b60f40448b5ab9a87d3ea665ef9bcf00df4209705050ecf2f7ecc649f44d6dfa5905bb50f15717e78d
   languageName: node
   linkType: hard
 
@@ -5833,10 +5841,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.1.14, tailwindcss@npm:^4":
-  version: 4.1.14
-  resolution: "tailwindcss@npm:4.1.14"
-  checksum: 10c0/c7e9ebfb241707b2a3eb7d465fd326cc8fcfa22e7215e01f67cccec32db8a49a19e17d1f694fc5d0435d55350ea3f863521c52c9bbe6bd790c2009dc8ff516a1
+"tailwindcss@npm:4.1.15, tailwindcss@npm:^4":
+  version: 4.1.15
+  resolution: "tailwindcss@npm:4.1.15"
+  checksum: 10c0/9023538f33c5d49003a19f68297d1b7d158fc9963a4c4023c588930665efbb192f020ad9f6566b007c2ce14458baeceb24337270c29eaa92ed753a8493594e43
   languageName: node
   linkType: hard
 
@@ -5872,7 +5880,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tar@npm:^7.4.3, tar@npm:^7.5.1":
+"tar@npm:^7.4.3":
   version: 7.5.1
   resolution: "tar@npm:7.5.1"
   dependencies:
