@@ -37,17 +37,17 @@ __metadata:
   linkType: hard
 
 "@biomejs/biome@npm:^2.1.3":
-  version: 2.2.7
-  resolution: "@biomejs/biome@npm:2.2.7"
+  version: 2.3.0
+  resolution: "@biomejs/biome@npm:2.3.0"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:2.2.7"
-    "@biomejs/cli-darwin-x64": "npm:2.2.7"
-    "@biomejs/cli-linux-arm64": "npm:2.2.7"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.2.7"
-    "@biomejs/cli-linux-x64": "npm:2.2.7"
-    "@biomejs/cli-linux-x64-musl": "npm:2.2.7"
-    "@biomejs/cli-win32-arm64": "npm:2.2.7"
-    "@biomejs/cli-win32-x64": "npm:2.2.7"
+    "@biomejs/cli-darwin-arm64": "npm:2.3.0"
+    "@biomejs/cli-darwin-x64": "npm:2.3.0"
+    "@biomejs/cli-linux-arm64": "npm:2.3.0"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.3.0"
+    "@biomejs/cli-linux-x64": "npm:2.3.0"
+    "@biomejs/cli-linux-x64-musl": "npm:2.3.0"
+    "@biomejs/cli-win32-arm64": "npm:2.3.0"
+    "@biomejs/cli-win32-x64": "npm:2.3.0"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -67,62 +67,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10c0/bae3d2cc3c8f4001d613a754b1071165ad36be2c169a21cbb3d42a0ab27d7c9c91d48480fe76f21deb4c6cdfb6bb25942d2c4f2c45f13ef6b37169551eefa02c
+  checksum: 10c0/e51770543c80e8309f76b7e1326df4108dad66a3f2ef86c8d4558ad5c43d269c3c0ad4882cbafc57cc2dd58feac1c98efd4a34c8d253d2a516412fda9d50016a
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.2.7"
+"@biomejs/cli-darwin-arm64@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.3.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@biomejs/cli-darwin-x64@npm:2.2.7"
+"@biomejs/cli-darwin-x64@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@biomejs/cli-darwin-x64@npm:2.3.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.2.7"
+"@biomejs/cli-linux-arm64-musl@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.3.0"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@biomejs/cli-linux-arm64@npm:2.2.7"
+"@biomejs/cli-linux-arm64@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@biomejs/cli-linux-arm64@npm:2.3.0"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.2.7"
+"@biomejs/cli-linux-x64-musl@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.3.0"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@biomejs/cli-linux-x64@npm:2.2.7"
+"@biomejs/cli-linux-x64@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@biomejs/cli-linux-x64@npm:2.3.0"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@biomejs/cli-win32-arm64@npm:2.2.7"
+"@biomejs/cli-win32-arm64@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@biomejs/cli-win32-arm64@npm:2.3.0"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@biomejs/cli-win32-x64@npm:2.2.7"
+"@biomejs/cli-win32-x64@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@biomejs/cli-win32-x64@npm:2.3.0"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -1062,91 +1062,91 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@orpc/client@npm:1.10.0, @orpc/client@npm:^1.7.8":
-  version: 1.10.0
-  resolution: "@orpc/client@npm:1.10.0"
+"@orpc/client@npm:1.10.1, @orpc/client@npm:^1.7.8":
+  version: 1.10.1
+  resolution: "@orpc/client@npm:1.10.1"
   dependencies:
-    "@orpc/shared": "npm:1.10.0"
-    "@orpc/standard-server": "npm:1.10.0"
-    "@orpc/standard-server-fetch": "npm:1.10.0"
-    "@orpc/standard-server-peer": "npm:1.10.0"
-  checksum: 10c0/ca051b41c8112152c949ed9804a3285668679a2b421fba5edd295bc2a90f3903ae24da62374f213058e04b5aa7568fff5bace26b5908b3bbdcfd94ef8c6e4f5c
+    "@orpc/shared": "npm:1.10.1"
+    "@orpc/standard-server": "npm:1.10.1"
+    "@orpc/standard-server-fetch": "npm:1.10.1"
+    "@orpc/standard-server-peer": "npm:1.10.1"
+  checksum: 10c0/264b3b74b0e2ffaaebcbe133b8b1b98d2ccc2cea9b9d5196ceddeda6b80e44f5343ca44d343e59675f74edd193b1eff34ef5d84fbe13b077fa8da6398f1114d1
   languageName: node
   linkType: hard
 
-"@orpc/contract@npm:1.10.0, @orpc/contract@npm:^1.7.8":
-  version: 1.10.0
-  resolution: "@orpc/contract@npm:1.10.0"
+"@orpc/contract@npm:1.10.1, @orpc/contract@npm:^1.7.8":
+  version: 1.10.1
+  resolution: "@orpc/contract@npm:1.10.1"
   dependencies:
-    "@orpc/client": "npm:1.10.0"
-    "@orpc/shared": "npm:1.10.0"
+    "@orpc/client": "npm:1.10.1"
+    "@orpc/shared": "npm:1.10.1"
     "@standard-schema/spec": "npm:^1.0.0"
     openapi-types: "npm:^12.1.3"
-  checksum: 10c0/34f6adecf387d7d1595968829c6c16dd8d7e9e75808e0e47cdfde9dcf5a527dd4db6803587c316b33ab615d635e1b5113f524d22f09f2c13f139926119991e06
+  checksum: 10c0/86b67eeb1d3f03d8d30a84b8d63250a8278ab585298377f8a1308de4c5b91db9f119e1f696879f1ec4e370127b89e003c7043a032bf4498cdda1db3b627d88e0
   languageName: node
   linkType: hard
 
-"@orpc/interop@npm:1.10.0":
-  version: 1.10.0
-  resolution: "@orpc/interop@npm:1.10.0"
-  checksum: 10c0/6e9fd90ed426b9c2c40b1de0ee526cf2643bd92f38747f1f0837aba37ff261e82298dfd44ef049767cbc542a76eab0a88e474cb44fd8eabc35f7ed83d7cecccf
+"@orpc/interop@npm:1.10.1":
+  version: 1.10.1
+  resolution: "@orpc/interop@npm:1.10.1"
+  checksum: 10c0/2cc434df147f23aa77764e88dce8163cab5081f64f6162aa52fa910269724b4804c06c94066950abc7ccf46a4904a39d4e2e2ef29938a37e6fb99c0ad5669309
   languageName: node
   linkType: hard
 
-"@orpc/json-schema@npm:1.10.0":
-  version: 1.10.0
-  resolution: "@orpc/json-schema@npm:1.10.0"
+"@orpc/json-schema@npm:1.10.1":
+  version: 1.10.1
+  resolution: "@orpc/json-schema@npm:1.10.1"
   dependencies:
-    "@orpc/contract": "npm:1.10.0"
-    "@orpc/interop": "npm:1.10.0"
-    "@orpc/openapi": "npm:1.10.0"
-    "@orpc/server": "npm:1.10.0"
-    "@orpc/shared": "npm:1.10.0"
-  checksum: 10c0/c5e0910f1e1a558d677bc0ad4246af8d24b644791fe278330c78f42c1dc4c6fc219f07743de75244ba2e9b8fb190f88060b6b16289fbcc5c23be8ba0868c7741
+    "@orpc/contract": "npm:1.10.1"
+    "@orpc/interop": "npm:1.10.1"
+    "@orpc/openapi": "npm:1.10.1"
+    "@orpc/server": "npm:1.10.1"
+    "@orpc/shared": "npm:1.10.1"
+  checksum: 10c0/4610ff8339173b82af25395dc26bf9a033ff25a95a2f106632b8baf0b3e3c6d74bc415b2739062b0aa081c657f192d7d9555da84dd9e811eda2f2c98f6b8b797
   languageName: node
   linkType: hard
 
-"@orpc/openapi-client@npm:1.10.0":
-  version: 1.10.0
-  resolution: "@orpc/openapi-client@npm:1.10.0"
+"@orpc/openapi-client@npm:1.10.1":
+  version: 1.10.1
+  resolution: "@orpc/openapi-client@npm:1.10.1"
   dependencies:
-    "@orpc/client": "npm:1.10.0"
-    "@orpc/contract": "npm:1.10.0"
-    "@orpc/shared": "npm:1.10.0"
-    "@orpc/standard-server": "npm:1.10.0"
-  checksum: 10c0/d0041d58e7132818c22d4f506dde3e639d0485317756de770a403ae8d2a8da9a113ed061972d8ef93419c973a0d756b98222ceec21c17a43d0cb5ef9d812c187
+    "@orpc/client": "npm:1.10.1"
+    "@orpc/contract": "npm:1.10.1"
+    "@orpc/shared": "npm:1.10.1"
+    "@orpc/standard-server": "npm:1.10.1"
+  checksum: 10c0/966f5133c49fc906f67293d302f072ce992d6c0f867707871648179c09431c0eaf6097c27b1eda04a5d5183269219830b0bb761c674562f62bc1b2f395d3e8d0
   languageName: node
   linkType: hard
 
-"@orpc/openapi@npm:1.10.0, @orpc/openapi@npm:^1.7.8":
-  version: 1.10.0
-  resolution: "@orpc/openapi@npm:1.10.0"
+"@orpc/openapi@npm:1.10.1, @orpc/openapi@npm:^1.7.8":
+  version: 1.10.1
+  resolution: "@orpc/openapi@npm:1.10.1"
   dependencies:
-    "@orpc/client": "npm:1.10.0"
-    "@orpc/contract": "npm:1.10.0"
-    "@orpc/interop": "npm:1.10.0"
-    "@orpc/openapi-client": "npm:1.10.0"
-    "@orpc/server": "npm:1.10.0"
-    "@orpc/shared": "npm:1.10.0"
-    "@orpc/standard-server": "npm:1.10.0"
+    "@orpc/client": "npm:1.10.1"
+    "@orpc/contract": "npm:1.10.1"
+    "@orpc/interop": "npm:1.10.1"
+    "@orpc/openapi-client": "npm:1.10.1"
+    "@orpc/server": "npm:1.10.1"
+    "@orpc/shared": "npm:1.10.1"
+    "@orpc/standard-server": "npm:1.10.1"
     rou3: "npm:^0.7.7"
-  checksum: 10c0/854334a212c6db7808852310dd8d66dab6a875e27cc4fa4a14444a7e30f4a1def228b47488e80de2e91ef10627d22f7f6da9b0fc6bc90dad63d3ebceb8cbdbf8
+  checksum: 10c0/150be7c87ea555a6873e72a7562cc1042623b37f1c03ff5bce3f480a74a85e7a363966c66afc3ca6cc0ad1b36f68d059217cbef68d2535266bef3dfc38a4f994
   languageName: node
   linkType: hard
 
-"@orpc/server@npm:1.10.0, @orpc/server@npm:^1.7.8":
-  version: 1.10.0
-  resolution: "@orpc/server@npm:1.10.0"
+"@orpc/server@npm:1.10.1, @orpc/server@npm:^1.7.8":
+  version: 1.10.1
+  resolution: "@orpc/server@npm:1.10.1"
   dependencies:
-    "@orpc/client": "npm:1.10.0"
-    "@orpc/contract": "npm:1.10.0"
-    "@orpc/interop": "npm:1.10.0"
-    "@orpc/shared": "npm:1.10.0"
-    "@orpc/standard-server": "npm:1.10.0"
-    "@orpc/standard-server-aws-lambda": "npm:1.10.0"
-    "@orpc/standard-server-fetch": "npm:1.10.0"
-    "@orpc/standard-server-node": "npm:1.10.0"
-    "@orpc/standard-server-peer": "npm:1.10.0"
+    "@orpc/client": "npm:1.10.1"
+    "@orpc/contract": "npm:1.10.1"
+    "@orpc/interop": "npm:1.10.1"
+    "@orpc/shared": "npm:1.10.1"
+    "@orpc/standard-server": "npm:1.10.1"
+    "@orpc/standard-server-aws-lambda": "npm:1.10.1"
+    "@orpc/standard-server-fetch": "npm:1.10.1"
+    "@orpc/standard-server-node": "npm:1.10.1"
+    "@orpc/standard-server-peer": "npm:1.10.1"
     cookie: "npm:^1.0.2"
   peerDependencies:
     crossws: ">=0.3.4"
@@ -1156,13 +1156,13 @@ __metadata:
       optional: true
     ws:
       optional: true
-  checksum: 10c0/c6e72ded82a4f887bac7526efe5b7882352b01b7dbf5434777169895b5da9201a28c9da9874e1c471eaf9adbb4d47c383ae7912bbe9811bab816ab64c2bbd3dd
+  checksum: 10c0/0abb2c6c2e682b5d3bb5e57653a727b516bdb377133ce878cd685985362b09128ee15913b4845363286584e4abd48fdca897b3e337ceaf2a6f73e7ee3b43dd01
   languageName: node
   linkType: hard
 
-"@orpc/shared@npm:1.10.0":
-  version: 1.10.0
-  resolution: "@orpc/shared@npm:1.10.0"
+"@orpc/shared@npm:1.10.1":
+  version: 1.10.1
+  resolution: "@orpc/shared@npm:1.10.1"
   dependencies:
     radash: "npm:^12.1.1"
     type-fest: "npm:^5.1.0"
@@ -1171,76 +1171,76 @@ __metadata:
   peerDependenciesMeta:
     "@opentelemetry/api":
       optional: true
-  checksum: 10c0/ea1368b69e1847a59058059fda0c757f196418e00632123dcdb04e1af49dc08f7072cb3a6b76c5fd4779dc5a5863ae4236aab41f79c5465c79ad5cf532e390a9
+  checksum: 10c0/c95066e980f0899503d1a20d5ccd9fcee278ceabedbc4fce5f5d228c57996dd1363b595279f3bfdac5decd12fdaae906d4f522eae5592223652a8d1ec48a9ee5
   languageName: node
   linkType: hard
 
-"@orpc/standard-server-aws-lambda@npm:1.10.0":
-  version: 1.10.0
-  resolution: "@orpc/standard-server-aws-lambda@npm:1.10.0"
+"@orpc/standard-server-aws-lambda@npm:1.10.1":
+  version: 1.10.1
+  resolution: "@orpc/standard-server-aws-lambda@npm:1.10.1"
   dependencies:
-    "@orpc/shared": "npm:1.10.0"
-    "@orpc/standard-server": "npm:1.10.0"
-    "@orpc/standard-server-fetch": "npm:1.10.0"
-    "@orpc/standard-server-node": "npm:1.10.0"
-  checksum: 10c0/05ed7a47ccc4162ae350c724e2a000e01c821221b99071c4d5b999f632db529ce2d74b40a371364c027a1f2704210927f32d03ab670cc50a3c8444465bb79ca6
+    "@orpc/shared": "npm:1.10.1"
+    "@orpc/standard-server": "npm:1.10.1"
+    "@orpc/standard-server-fetch": "npm:1.10.1"
+    "@orpc/standard-server-node": "npm:1.10.1"
+  checksum: 10c0/3a35ffe6d89812010f92def75bb82ff91fb6c729d5499c985476a214881064c0801f31fe9d76e48552189e477652fb430329b2471d45117be457ec60e27fa653
   languageName: node
   linkType: hard
 
-"@orpc/standard-server-fetch@npm:1.10.0":
-  version: 1.10.0
-  resolution: "@orpc/standard-server-fetch@npm:1.10.0"
+"@orpc/standard-server-fetch@npm:1.10.1":
+  version: 1.10.1
+  resolution: "@orpc/standard-server-fetch@npm:1.10.1"
   dependencies:
-    "@orpc/shared": "npm:1.10.0"
-    "@orpc/standard-server": "npm:1.10.0"
-  checksum: 10c0/4751fc457617d41b679cb8ba17ee9cce86e09af9f5a77060486cc0b54952c9e1e236426f54aadce983ede5d865a112152904e26a193bc3b0090f51c9a68bfdbc
+    "@orpc/shared": "npm:1.10.1"
+    "@orpc/standard-server": "npm:1.10.1"
+  checksum: 10c0/391e80d900d7f272af14f1549399a8b2cc778772938ba8a0f4582fb1e02ee93d79691c30c2ceb49c47d8f256d7e37ff4060dfe6cd2ea9bbee86745ae267f0b75
   languageName: node
   linkType: hard
 
-"@orpc/standard-server-node@npm:1.10.0":
-  version: 1.10.0
-  resolution: "@orpc/standard-server-node@npm:1.10.0"
+"@orpc/standard-server-node@npm:1.10.1":
+  version: 1.10.1
+  resolution: "@orpc/standard-server-node@npm:1.10.1"
   dependencies:
-    "@orpc/shared": "npm:1.10.0"
-    "@orpc/standard-server": "npm:1.10.0"
-    "@orpc/standard-server-fetch": "npm:1.10.0"
-  checksum: 10c0/3da9ef99f396140d8f7b19251342318b3180f900958af6867d3bbb8aa4f7c41ac3b85dcd7ccffcd265d8399ec11aa608f6a7e4470a55f4cde8bb410ade99749d
+    "@orpc/shared": "npm:1.10.1"
+    "@orpc/standard-server": "npm:1.10.1"
+    "@orpc/standard-server-fetch": "npm:1.10.1"
+  checksum: 10c0/d83fb7fadcbaf694b58bc9ef4bff0575f98bcf47330b48da3283f687c7f636b2820f15876e2b0ecf41f95d700ffeccd10ecda01f5544e5ccb31745394183b8bf
   languageName: node
   linkType: hard
 
-"@orpc/standard-server-peer@npm:1.10.0":
-  version: 1.10.0
-  resolution: "@orpc/standard-server-peer@npm:1.10.0"
+"@orpc/standard-server-peer@npm:1.10.1":
+  version: 1.10.1
+  resolution: "@orpc/standard-server-peer@npm:1.10.1"
   dependencies:
-    "@orpc/shared": "npm:1.10.0"
-    "@orpc/standard-server": "npm:1.10.0"
-  checksum: 10c0/0a01c8fcd80800c86cee15fb25ebb928f29d41b1d7ecbc10ecae4008f6e4fe603b0f8af4b5f99a4d8b58dc9cb4633475b43a447b5581d02262609cd1421f182d
+    "@orpc/shared": "npm:1.10.1"
+    "@orpc/standard-server": "npm:1.10.1"
+  checksum: 10c0/bd38fd19c1c9f4c4926318432012d17ed4d1f99d42df2f41f9ccafb11a318851067a90986b5c32b9b0b238081c3759587e2816655867b0462c1ab04334a98a53
   languageName: node
   linkType: hard
 
-"@orpc/standard-server@npm:1.10.0":
-  version: 1.10.0
-  resolution: "@orpc/standard-server@npm:1.10.0"
+"@orpc/standard-server@npm:1.10.1":
+  version: 1.10.1
+  resolution: "@orpc/standard-server@npm:1.10.1"
   dependencies:
-    "@orpc/shared": "npm:1.10.0"
-  checksum: 10c0/5e5f22270787cc167b755e4116dc9ac4b414d5a0c5738549f8d729853f9e46f08658de2ad3e73b5de570cfa5e8c8f6fa8c08ef9fcc6d8b238ba20248863411ea
+    "@orpc/shared": "npm:1.10.1"
+  checksum: 10c0/6ab5ef1750f58e998dd6490a2fb2dc52b89ea741c91afabd4a69dbf6c95d1c882c299148a4de8751a2286c78aada23f29deaa3cd9d630dfa6cb2b74708dfb08c
   languageName: node
   linkType: hard
 
 "@orpc/zod@npm:^1.7.8":
-  version: 1.10.0
-  resolution: "@orpc/zod@npm:1.10.0"
+  version: 1.10.1
+  resolution: "@orpc/zod@npm:1.10.1"
   dependencies:
-    "@orpc/json-schema": "npm:1.10.0"
-    "@orpc/openapi": "npm:1.10.0"
-    "@orpc/shared": "npm:1.10.0"
+    "@orpc/json-schema": "npm:1.10.1"
+    "@orpc/openapi": "npm:1.10.1"
+    "@orpc/shared": "npm:1.10.1"
     escape-string-regexp: "npm:^5.0.0"
     wildcard-match: "npm:^5.1.3"
   peerDependencies:
-    "@orpc/contract": 1.10.0
-    "@orpc/server": 1.10.0
+    "@orpc/contract": 1.10.1
+    "@orpc/server": 1.10.1
     zod: ">=3.25.0"
-  checksum: 10c0/ab71cef82f069d86c116bd69f869afe5379c6cd1ed11fe18bf016ad5999780521387098ab6a2458d2350b0b5f59a088661a1fb848b3e9f6e929a22c328f7dd3a
+  checksum: 10c0/5e6db9b40169a64aa387898fbfa6c2f77901173c646f1ce9764a1dec0d3b02e87428ff73856c9014c7c4c56f334ed9dc563c812b55d3a20ab61e1230cc690bed
   languageName: node
   linkType: hard
 
