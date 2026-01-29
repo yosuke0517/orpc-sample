@@ -934,19 +934,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:15.5.10":
-  version: 15.5.10
-  resolution: "@next/env@npm:15.5.10"
-  checksum: 10c0/fb26c299ff388a3a0b2d14379616e3e59fe7960002e5aa67be4d195a377b9803fb93dd90067a5eb7d889d6f437aff091171701eec0e8d201666160269dda4e95
+"@next/env@npm:15.5.11":
+  version: 15.5.11
+  resolution: "@next/env@npm:15.5.11"
+  checksum: 10c0/c39975896cac734d4535bbd1af1e58c52932f1f681d9c2b85caf963071e65a62cb19e3b66653d0127a3c0a647cd9ee96dcde6a4e0d0fbb17a9940ed378fdd3b1
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:15.5.10":
-  version: 15.5.10
-  resolution: "@next/eslint-plugin-next@npm:15.5.10"
+"@next/eslint-plugin-next@npm:15.5.11":
+  version: 15.5.11
+  resolution: "@next/eslint-plugin-next@npm:15.5.11"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10c0/ee654e45aea3e21b0c45a7ef732266466fd182e2341fa91e994ac1d0600d733f134902f04e10baff18c73443f04f5536db26fae4e882ce334873fbdf93118368
+  checksum: 10c0/4a9667ad428107b9dbaa6d1c3d931b386a2c33a481f120bee5e0ea3be2ee3d8e442bb64ca96f9caa70df85eee643d025a5c5bf803bbcd45069d37218620cf521
   languageName: node
   linkType: hard
 
@@ -2972,11 +2972,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:15.5.10":
-  version: 15.5.10
-  resolution: "eslint-config-next@npm:15.5.10"
+"eslint-config-next@npm:15.5.11":
+  version: 15.5.11
+  resolution: "eslint-config-next@npm:15.5.11"
   dependencies:
-    "@next/eslint-plugin-next": "npm:15.5.10"
+    "@next/eslint-plugin-next": "npm:15.5.11"
     "@rushstack/eslint-patch": "npm:^1.10.3"
     "@typescript-eslint/eslint-plugin": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
     "@typescript-eslint/parser": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
@@ -2992,7 +2992,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/47ca30dfcd97e0940d268bc881aabfe7907bf44415b52717a30dce2f197775f8eaac00d68f41592ce4ca2dbf8b66f5b3cc5b17ce6fb536e524e29e67b68d15fe
+  checksum: 10c0/155c946788903615f6d3805edbf24456b2f2124d68e9bd817c5d28ce3d5dfa2c9cc8f653e7ac3eca4b23aaa93d4b1ea7fd4a33a69b40e6e025a4fdfe59811c9a
   languageName: node
   linkType: hard
 
@@ -4530,11 +4530,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:15.5.10":
-  version: 15.5.10
-  resolution: "next@npm:15.5.10"
+"next@npm:15.5.11":
+  version: 15.5.11
+  resolution: "next@npm:15.5.11"
   dependencies:
-    "@next/env": "npm:15.5.10"
+    "@next/env": "npm:15.5.11"
     "@next/swc-darwin-arm64": "npm:15.5.7"
     "@next/swc-darwin-x64": "npm:15.5.7"
     "@next/swc-linux-arm64-gnu": "npm:15.5.7"
@@ -4585,7 +4585,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 10c0/ebf358cfc13e856ac2d60f6b1eb166560c541796d3422d6719712c0e8038626407f6075cb0d2805d9d6392404a5b0e63e501515982d78d7e934b721ea9753b17
+  checksum: 10c0/a025661541e56ea5402d173941b84f771796d400bae4b8068a68b8347228b1544269737645a95be1c8cfc34bf862fdd1b899767b7c350ce62368be666048cdf0
   languageName: node
   linkType: hard
 
@@ -4765,8 +4765,8 @@ __metadata:
     drizzle-orm: "npm:^0.45.0"
     drizzle-zod: "npm:^0.8.3"
     eslint: "npm:^9"
-    eslint-config-next: "npm:15.5.10"
-    next: "npm:15.5.10"
+    eslint-config-next: "npm:15.5.11"
+    next: "npm:15.5.11"
     pg: "npm:^8.16.3"
     react: "npm:19.2.4"
     react-dom: "npm:19.2.4"
