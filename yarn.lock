@@ -37,17 +37,17 @@ __metadata:
   linkType: hard
 
 "@biomejs/biome@npm:^2.1.3":
-  version: 2.3.15
-  resolution: "@biomejs/biome@npm:2.3.15"
+  version: 2.4.0
+  resolution: "@biomejs/biome@npm:2.4.0"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:2.3.15"
-    "@biomejs/cli-darwin-x64": "npm:2.3.15"
-    "@biomejs/cli-linux-arm64": "npm:2.3.15"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.3.15"
-    "@biomejs/cli-linux-x64": "npm:2.3.15"
-    "@biomejs/cli-linux-x64-musl": "npm:2.3.15"
-    "@biomejs/cli-win32-arm64": "npm:2.3.15"
-    "@biomejs/cli-win32-x64": "npm:2.3.15"
+    "@biomejs/cli-darwin-arm64": "npm:2.4.0"
+    "@biomejs/cli-darwin-x64": "npm:2.4.0"
+    "@biomejs/cli-linux-arm64": "npm:2.4.0"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.4.0"
+    "@biomejs/cli-linux-x64": "npm:2.4.0"
+    "@biomejs/cli-linux-x64-musl": "npm:2.4.0"
+    "@biomejs/cli-win32-arm64": "npm:2.4.0"
+    "@biomejs/cli-win32-x64": "npm:2.4.0"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -67,62 +67,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10c0/17fe84f92a282a4ac742324c84abae07ee746581e4bc34be82cfb36482fb9c5bf34b7d612a8463c7f656b40197470e9566080f91fa3660252ea32e08e20aa08c
+  checksum: 10c0/c10de983720ac20df56755f42f48b2b56fcc1082d364193f1410d07b62c4b7c3437abdbc9cfd60f2a65cd0f3baa7abf8d09a85cd6962b1363f77034e877c13b3
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.3.15":
-  version: 2.3.15
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.3.15"
+"@biomejs/cli-darwin-arm64@npm:2.4.0":
+  version: 2.4.0
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.4.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.3.15":
-  version: 2.3.15
-  resolution: "@biomejs/cli-darwin-x64@npm:2.3.15"
+"@biomejs/cli-darwin-x64@npm:2.4.0":
+  version: 2.4.0
+  resolution: "@biomejs/cli-darwin-x64@npm:2.4.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.3.15":
-  version: 2.3.15
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.3.15"
+"@biomejs/cli-linux-arm64-musl@npm:2.4.0":
+  version: 2.4.0
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.4.0"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.3.15":
-  version: 2.3.15
-  resolution: "@biomejs/cli-linux-arm64@npm:2.3.15"
+"@biomejs/cli-linux-arm64@npm:2.4.0":
+  version: 2.4.0
+  resolution: "@biomejs/cli-linux-arm64@npm:2.4.0"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.3.15":
-  version: 2.3.15
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.3.15"
+"@biomejs/cli-linux-x64-musl@npm:2.4.0":
+  version: 2.4.0
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.4.0"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.3.15":
-  version: 2.3.15
-  resolution: "@biomejs/cli-linux-x64@npm:2.3.15"
+"@biomejs/cli-linux-x64@npm:2.4.0":
+  version: 2.4.0
+  resolution: "@biomejs/cli-linux-x64@npm:2.4.0"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.3.15":
-  version: 2.3.15
-  resolution: "@biomejs/cli-win32-arm64@npm:2.3.15"
+"@biomejs/cli-win32-arm64@npm:2.4.0":
+  version: 2.4.0
+  resolution: "@biomejs/cli-win32-arm64@npm:2.4.0"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.3.15":
-  version: 2.3.15
-  resolution: "@biomejs/cli-win32-x64@npm:2.3.15"
+"@biomejs/cli-win32-x64@npm:2.4.0":
+  version: 2.4.0
+  resolution: "@biomejs/cli-win32-x64@npm:2.4.0"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -5861,9 +5861,9 @@ __metadata:
   linkType: hard
 
 "tailwind-merge@npm:^3.3.1":
-  version: 3.4.0
-  resolution: "tailwind-merge@npm:3.4.0"
-  checksum: 10c0/eaf17bb695c51c7bb7a90366a9c62be295473ee97fcfd1da54287714d4a5788a88ff4ad1ab9e0128638257fda777d6c9ea88682e36195e31a7fa2cf43f45e310
+  version: 3.4.1
+  resolution: "tailwind-merge@npm:3.4.1"
+  checksum: 10c0/0b601ac81673871eb5056dc2e300140d0d7b9998ce5bff2223514126ae1c4275a6537ddc9ae1bc49367b7d1b2d20d609916e5e072a80405947a78b438f06c282
   languageName: node
   linkType: hard
 
