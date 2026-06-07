@@ -1695,12 +1695,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^22.0.0":
-  version: 22.19.20
-  resolution: "@types/node@npm:22.19.20"
+"@types/node@npm:^24.0.0":
+  version: 24.13.1
+  resolution: "@types/node@npm:24.13.1"
   dependencies:
-    undici-types: "npm:~6.21.0"
-  checksum: 10c0/933d4466f1a498dd7c8e173af7265a53e9d410cab4a827ccc348414d5065a9a40ba7a7c994a71b3ee651188111db3b43573b830dc30a61a7489f3e6efc537bf7
+    undici-types: "npm:~7.18.0"
+  checksum: 10c0/ef58425ed71c7fefa95f30d370eeb0390f24c9337d66fa6617b5a14b53e2e831aa6a13e95d978d9057237bf257062b8fa60f773380abed1607183fe7065bc26b
   languageName: node
   linkType: hard
 
@@ -5034,7 +5034,7 @@ __metadata:
     "@orpc/zod": "npm:^1.7.8"
     "@tailwindcss/postcss": "npm:^4"
     "@types/better-sqlite3": "npm:^7.6.13"
-    "@types/node": "npm:^22.0.0"
+    "@types/node": "npm:^24.0.0"
     "@types/pg": "npm:^8.15.5"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
@@ -6381,10 +6381,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~6.21.0":
-  version: 6.21.0
-  resolution: "undici-types@npm:6.21.0"
-  checksum: 10c0/c01ed51829b10aa72fc3ce64b747f8e74ae9b60eafa19a7b46ef624403508a54c526ffab06a14a26b3120d055e1104d7abe7c9017e83ced038ea5cf52f8d5e04
+"undici-types@npm:~7.18.0":
+  version: 7.18.2
+  resolution: "undici-types@npm:7.18.2"
+  checksum: 10c0/85a79189113a238959d7a647368e4f7c5559c3a404ebdb8fc4488145ce9426fcd82252a844a302798dfc0e37e6fb178ff481ed03bc4caf634c5757d9ef43521d
   languageName: node
   linkType: hard
 
