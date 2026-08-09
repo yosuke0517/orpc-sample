@@ -1245,94 +1245,94 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@orpc/client@npm:1.14.15, @orpc/client@npm:^1.7.8":
-  version: 1.14.15
-  resolution: "@orpc/client@npm:1.14.15"
+"@orpc/client@npm:1.15.0, @orpc/client@npm:^1.7.8":
+  version: 1.15.0
+  resolution: "@orpc/client@npm:1.15.0"
   dependencies:
-    "@orpc/shared": "npm:1.14.15"
-    "@orpc/standard-server": "npm:1.14.15"
-    "@orpc/standard-server-fetch": "npm:1.14.15"
-    "@orpc/standard-server-peer": "npm:1.14.15"
-  checksum: 10c0/83067a6d0edc2f38508f135a9609d3bddda0f791f43f1c5cd247154963037f1ebe822a45aeb6af7444301c26f9516928b406a4558fd6f95ea54a1a7ce3431eb2
+    "@orpc/shared": "npm:1.15.0"
+    "@orpc/standard-server": "npm:1.15.0"
+    "@orpc/standard-server-fetch": "npm:1.15.0"
+    "@orpc/standard-server-peer": "npm:1.15.0"
+  checksum: 10c0/45cd9e32be473d0216dfeb6ad4bed826eb73aebe36f0e054fb2693cab5dca3736c848997c275b1150475c5a475e3c82c11efac5078e25cb9d90e30fbcf3692d7
   languageName: node
   linkType: hard
 
-"@orpc/contract@npm:1.14.15, @orpc/contract@npm:^1.7.8":
-  version: 1.14.15
-  resolution: "@orpc/contract@npm:1.14.15"
+"@orpc/contract@npm:1.15.0, @orpc/contract@npm:^1.7.8":
+  version: 1.15.0
+  resolution: "@orpc/contract@npm:1.15.0"
   dependencies:
-    "@orpc/client": "npm:1.14.15"
-    "@orpc/shared": "npm:1.14.15"
+    "@orpc/client": "npm:1.15.0"
+    "@orpc/shared": "npm:1.15.0"
     "@standard-schema/spec": "npm:^1.1.0"
     openapi-types: "npm:^12.1.3"
-  checksum: 10c0/c9358e797d8367cf37f049043bdbd7ca5d68d539835efe3994126b2851aaee058677f9c36aa7fe1c90e3ff43d2dacb377f3cfc0a2aed827d047c2e2dd6ba1675
+  checksum: 10c0/1f36dfa476917f324a7b855e84992fadb8b66474bbe48ceb0729b83e664be7f6d177fb52cb6595d58759d9c726143d824ac68b9252901431a892f9138a84ecc7
   languageName: node
   linkType: hard
 
-"@orpc/interop@npm:1.14.15":
-  version: 1.14.15
-  resolution: "@orpc/interop@npm:1.14.15"
-  checksum: 10c0/6407f3d791b49ee92040b557fd0f340999f92730b787b400c4e3cbef32227630ecca2336841e4af6623daa2efead7739ccb0bc61ce5983a843199b7adedb625f
+"@orpc/interop@npm:1.15.0":
+  version: 1.15.0
+  resolution: "@orpc/interop@npm:1.15.0"
+  checksum: 10c0/8e9c41005cf49f61888bfe42c5a903226edec91c420c3b2b5cb1ea2d1d1e998bd295227899fb8f8bf01864fe27dc080ddea2fd31abe3d563cb20d4f443cc541e
   languageName: node
   linkType: hard
 
-"@orpc/json-schema@npm:1.14.15":
-  version: 1.14.15
-  resolution: "@orpc/json-schema@npm:1.14.15"
+"@orpc/json-schema@npm:1.15.0":
+  version: 1.15.0
+  resolution: "@orpc/json-schema@npm:1.15.0"
   dependencies:
-    "@orpc/contract": "npm:1.14.15"
-    "@orpc/interop": "npm:1.14.15"
-    "@orpc/openapi": "npm:1.14.15"
-    "@orpc/server": "npm:1.14.15"
-    "@orpc/shared": "npm:1.14.15"
+    "@orpc/contract": "npm:1.15.0"
+    "@orpc/interop": "npm:1.15.0"
+    "@orpc/openapi": "npm:1.15.0"
+    "@orpc/server": "npm:1.15.0"
+    "@orpc/shared": "npm:1.15.0"
     json-schema-typed: "npm:^8.0.2"
-  checksum: 10c0/ec5dc1602bf4655250452534961991e96e923a9c4f6b01e9c5854a7ec5e8f021d23b5884ca9c61e2331ad10d7eaae5b006e79c3836cedaeb9ca538263b77d1ce
+  checksum: 10c0/91c30fcaf6f882c3d990836f0793c09a39e19eb0467f32a979319a7ff936de8e3e268732f5020378582b4d40e09bfe8b80134b2dd6f3840d14f87145fbc39cc5
   languageName: node
   linkType: hard
 
-"@orpc/openapi-client@npm:1.14.15":
-  version: 1.14.15
-  resolution: "@orpc/openapi-client@npm:1.14.15"
+"@orpc/openapi-client@npm:1.15.0":
+  version: 1.15.0
+  resolution: "@orpc/openapi-client@npm:1.15.0"
   dependencies:
-    "@orpc/client": "npm:1.14.15"
-    "@orpc/contract": "npm:1.14.15"
-    "@orpc/shared": "npm:1.14.15"
-    "@orpc/standard-server": "npm:1.14.15"
-  checksum: 10c0/88a676ed18a18bf9cc3471752dff61f324e82afe760e0f12631a6dcce1b42a9cb78af9f447a93dc1f19060cab16b669c98372f893629d4c15736b24b4696dee9
+    "@orpc/client": "npm:1.15.0"
+    "@orpc/contract": "npm:1.15.0"
+    "@orpc/shared": "npm:1.15.0"
+    "@orpc/standard-server": "npm:1.15.0"
+  checksum: 10c0/9d4e2f5698e3720b4f355e503b1141dec01d2fb11a33aed1e4f79592a760bfb0c76424e6326851b5316e879abb70c8c0979d661bb95c74a958f6b8edfb57dbd1
   languageName: node
   linkType: hard
 
-"@orpc/openapi@npm:1.14.15, @orpc/openapi@npm:^1.7.8":
-  version: 1.14.15
-  resolution: "@orpc/openapi@npm:1.14.15"
+"@orpc/openapi@npm:1.15.0, @orpc/openapi@npm:^1.7.8":
+  version: 1.15.0
+  resolution: "@orpc/openapi@npm:1.15.0"
   dependencies:
-    "@orpc/client": "npm:1.14.15"
-    "@orpc/contract": "npm:1.14.15"
-    "@orpc/interop": "npm:1.14.15"
-    "@orpc/openapi-client": "npm:1.14.15"
-    "@orpc/server": "npm:1.14.15"
-    "@orpc/shared": "npm:1.14.15"
-    "@orpc/standard-server": "npm:1.14.15"
+    "@orpc/client": "npm:1.15.0"
+    "@orpc/contract": "npm:1.15.0"
+    "@orpc/interop": "npm:1.15.0"
+    "@orpc/openapi-client": "npm:1.15.0"
+    "@orpc/server": "npm:1.15.0"
+    "@orpc/shared": "npm:1.15.0"
+    "@orpc/standard-server": "npm:1.15.0"
     json-schema-typed: "npm:^8.0.2"
     rou3: "npm:^0.7.12"
-  checksum: 10c0/d0b37aae17ebe65c89712a4848b60133bc9116b6d2734969262e9498d165da1543d813476b12b5b72197355786148b78dd11ecf3c05f11fa5e22f2074acf78db
+  checksum: 10c0/23d7c80d81337d473d04316d128ae0a38c1743fd0c7f541d174d332a9d5de47e70eb4ea01d73c0ad7090506577c32eb07a86affffbc404784221ba32ac375677
   languageName: node
   linkType: hard
 
-"@orpc/server@npm:1.14.15, @orpc/server@npm:^1.7.8":
-  version: 1.14.15
-  resolution: "@orpc/server@npm:1.14.15"
+"@orpc/server@npm:1.15.0, @orpc/server@npm:^1.7.8":
+  version: 1.15.0
+  resolution: "@orpc/server@npm:1.15.0"
   dependencies:
-    "@orpc/client": "npm:1.14.15"
-    "@orpc/contract": "npm:1.14.15"
-    "@orpc/interop": "npm:1.14.15"
-    "@orpc/shared": "npm:1.14.15"
-    "@orpc/standard-server": "npm:1.14.15"
-    "@orpc/standard-server-aws-lambda": "npm:1.14.15"
-    "@orpc/standard-server-fastify": "npm:1.14.15"
-    "@orpc/standard-server-fetch": "npm:1.14.15"
-    "@orpc/standard-server-node": "npm:1.14.15"
-    "@orpc/standard-server-peer": "npm:1.14.15"
+    "@orpc/client": "npm:1.15.0"
+    "@orpc/contract": "npm:1.15.0"
+    "@orpc/interop": "npm:1.15.0"
+    "@orpc/shared": "npm:1.15.0"
+    "@orpc/standard-server": "npm:1.15.0"
+    "@orpc/standard-server-aws-lambda": "npm:1.15.0"
+    "@orpc/standard-server-fastify": "npm:1.15.0"
+    "@orpc/standard-server-fetch": "npm:1.15.0"
+    "@orpc/standard-server-node": "npm:1.15.0"
+    "@orpc/standard-server-peer": "npm:1.15.0"
     cookie: "npm:^1.1.1"
   peerDependencies:
     crossws: ">=0.3.4"
@@ -1342,13 +1342,13 @@ __metadata:
       optional: true
     ws:
       optional: true
-  checksum: 10c0/3a72f391502888820722ad071453456154386c1f9eb85a1a720d097e795602aa92860f4a4cf2e3c4e252641651eebfb58bcbbfe29e50409f280a5256dca9d1b1
+  checksum: 10c0/d570f31476f2677159058c42a6fa3e25ca065357a5b6a1d5b4e7270e627c780ea25ce9db08879b939c4459f191d958ac39055f7b04af47f32c7abad2bb98960a
   languageName: node
   linkType: hard
 
-"@orpc/shared@npm:1.14.15":
-  version: 1.14.15
-  resolution: "@orpc/shared@npm:1.14.15"
+"@orpc/shared@npm:1.15.0":
+  version: 1.15.0
+  resolution: "@orpc/shared@npm:1.15.0"
   dependencies:
     radash: "npm:^12.1.1"
     type-fest: "npm:^5.4.4"
@@ -1357,92 +1357,92 @@ __metadata:
   peerDependenciesMeta:
     "@opentelemetry/api":
       optional: true
-  checksum: 10c0/54326a8b3c8612ab04302105696f939be28bd2acef674ebb9b9dab4b41da97cdcb34c929152198591559244d0766d88cd502ddcdd88b1704296ea14656f3e756
+  checksum: 10c0/4491a1e28db5f20e70d0b44daaafc95b2beedf9c732b63072d0d4f2a0b79b4d43030809d6f4b60d6161f0569f7391cab86667b988296ec4b09d05c1f77c41cb5
   languageName: node
   linkType: hard
 
-"@orpc/standard-server-aws-lambda@npm:1.14.15":
-  version: 1.14.15
-  resolution: "@orpc/standard-server-aws-lambda@npm:1.14.15"
+"@orpc/standard-server-aws-lambda@npm:1.15.0":
+  version: 1.15.0
+  resolution: "@orpc/standard-server-aws-lambda@npm:1.15.0"
   dependencies:
-    "@orpc/shared": "npm:1.14.15"
-    "@orpc/standard-server": "npm:1.14.15"
-    "@orpc/standard-server-fetch": "npm:1.14.15"
-    "@orpc/standard-server-node": "npm:1.14.15"
-  checksum: 10c0/d46376379146586864a8498b461cd226b884d88d846bf9d92762e499893bf2905df077994de6ba750a1917a6f9d9deb955732dffc0ef0310cd19f262a46f703d
+    "@orpc/shared": "npm:1.15.0"
+    "@orpc/standard-server": "npm:1.15.0"
+    "@orpc/standard-server-fetch": "npm:1.15.0"
+    "@orpc/standard-server-node": "npm:1.15.0"
+  checksum: 10c0/0e49d027a0c9d0fd6243e16bc97305fc4d9bb89428379a20003b94cb9e3d92aee961d531dbd6ca8034aa80ee049e2ab125157ae3049f90677a38aa42e984a0e3
   languageName: node
   linkType: hard
 
-"@orpc/standard-server-fastify@npm:1.14.15":
-  version: 1.14.15
-  resolution: "@orpc/standard-server-fastify@npm:1.14.15"
+"@orpc/standard-server-fastify@npm:1.15.0":
+  version: 1.15.0
+  resolution: "@orpc/standard-server-fastify@npm:1.15.0"
   dependencies:
-    "@orpc/shared": "npm:1.14.15"
-    "@orpc/standard-server": "npm:1.14.15"
-    "@orpc/standard-server-node": "npm:1.14.15"
+    "@orpc/shared": "npm:1.15.0"
+    "@orpc/standard-server": "npm:1.15.0"
+    "@orpc/standard-server-node": "npm:1.15.0"
   peerDependencies:
     fastify: ">=5.6.1"
   peerDependenciesMeta:
     fastify:
       optional: true
-  checksum: 10c0/599cea45d3cdc84581d0beb4be64c0bd497b8cc8158231c3d86dd55c4620cb9f7e7abddfba014d2591a43831adef0a2366024e4a096528727fe438ea716a712d
+  checksum: 10c0/705ba8d3aedc253ce64bbab7d3f494447b9cf9cbdff9c15a6349ea525af3ff4ad4e3ab6a642287bc7e7a656c0a1f2331d4d074330090d2e894d50eb7f0ad6c7c
   languageName: node
   linkType: hard
 
-"@orpc/standard-server-fetch@npm:1.14.15":
-  version: 1.14.15
-  resolution: "@orpc/standard-server-fetch@npm:1.14.15"
+"@orpc/standard-server-fetch@npm:1.15.0":
+  version: 1.15.0
+  resolution: "@orpc/standard-server-fetch@npm:1.15.0"
   dependencies:
-    "@orpc/shared": "npm:1.14.15"
-    "@orpc/standard-server": "npm:1.14.15"
-  checksum: 10c0/fc647a9a1f69cab578f0db83ae662006f997c9c8561400c981bdcbb5fa8f66c126ece5fb99eab4bc551c3d648c07d24134715cd222d94b887c6e7187c9d59de8
+    "@orpc/shared": "npm:1.15.0"
+    "@orpc/standard-server": "npm:1.15.0"
+  checksum: 10c0/ec4048a9a7e0793178a8b743df35fd8ce38e507ff60e9566a0dd2d33c01371edb45e3606777dd52579aa3fbea3aab49c96c6429991061ca7b971cd6a2686b351
   languageName: node
   linkType: hard
 
-"@orpc/standard-server-node@npm:1.14.15":
-  version: 1.14.15
-  resolution: "@orpc/standard-server-node@npm:1.14.15"
+"@orpc/standard-server-node@npm:1.15.0":
+  version: 1.15.0
+  resolution: "@orpc/standard-server-node@npm:1.15.0"
   dependencies:
-    "@orpc/shared": "npm:1.14.15"
-    "@orpc/standard-server": "npm:1.14.15"
-    "@orpc/standard-server-fetch": "npm:1.14.15"
-  checksum: 10c0/c9ad5ab8fcf70ae118b6191a9ccb45cee5a64617a62eef1e7df02ad9fbf9bae72d02ce80c6cb6987697d0785aadeaaaa1443b0133007c8cd28ba467ddd7fbdf6
+    "@orpc/shared": "npm:1.15.0"
+    "@orpc/standard-server": "npm:1.15.0"
+    "@orpc/standard-server-fetch": "npm:1.15.0"
+  checksum: 10c0/b1623be0945d3d5ed1edf091deeb88b9fad9b4d89ba7c1b71f11b929714e55347cd831163d55b30c411303a48e0f1637a863e4944d77647d10a0a147f0a753c4
   languageName: node
   linkType: hard
 
-"@orpc/standard-server-peer@npm:1.14.15":
-  version: 1.14.15
-  resolution: "@orpc/standard-server-peer@npm:1.14.15"
+"@orpc/standard-server-peer@npm:1.15.0":
+  version: 1.15.0
+  resolution: "@orpc/standard-server-peer@npm:1.15.0"
   dependencies:
-    "@orpc/shared": "npm:1.14.15"
-    "@orpc/standard-server": "npm:1.14.15"
-  checksum: 10c0/702d3dc67eca311104a992d09254eccef4610cf9f08d47bbb7641ebfed5494d3b293b2d5b3454efb64208e85594bb7215bd9ff52bf3113ac4af302a1513b1ca8
+    "@orpc/shared": "npm:1.15.0"
+    "@orpc/standard-server": "npm:1.15.0"
+  checksum: 10c0/2076cc63c26d3df9c4fd03bc201f791666022d4efffc4cbd166a4419da8cba86b3325a820ca30f205920e38550bad65705be28daa3d82a3d1412e397108d866a
   languageName: node
   linkType: hard
 
-"@orpc/standard-server@npm:1.14.15":
-  version: 1.14.15
-  resolution: "@orpc/standard-server@npm:1.14.15"
+"@orpc/standard-server@npm:1.15.0":
+  version: 1.15.0
+  resolution: "@orpc/standard-server@npm:1.15.0"
   dependencies:
-    "@orpc/shared": "npm:1.14.15"
-  checksum: 10c0/4d7047e7d0a9bf245e0975a1e81257cc0e282f4038610c69d673bc9856844ece1a524918196911635b204361fae793c560934ecc547e4c2aba83d4c4bdaa3cb1
+    "@orpc/shared": "npm:1.15.0"
+  checksum: 10c0/2c06041096122aaa657e1ce1072556cf9bf13c60ca3da733c101358db5af8e3166775450971d81915dff480c3e6385a79c94c4bb93933536b2dc3552ea71597f
   languageName: node
   linkType: hard
 
 "@orpc/zod@npm:^1.7.8":
-  version: 1.14.15
-  resolution: "@orpc/zod@npm:1.14.15"
+  version: 1.15.0
+  resolution: "@orpc/zod@npm:1.15.0"
   dependencies:
-    "@orpc/json-schema": "npm:1.14.15"
-    "@orpc/openapi": "npm:1.14.15"
-    "@orpc/shared": "npm:1.14.15"
+    "@orpc/json-schema": "npm:1.15.0"
+    "@orpc/openapi": "npm:1.15.0"
+    "@orpc/shared": "npm:1.15.0"
     escape-string-regexp: "npm:^5.0.0"
     wildcard-match: "npm:^5.1.4"
   peerDependencies:
-    "@orpc/contract": 1.14.15
-    "@orpc/server": 1.14.15
+    "@orpc/contract": 1.15.0
+    "@orpc/server": 1.15.0
     zod: ">=3.25.0"
-  checksum: 10c0/76cd03bd75c2efd22ad36e3fdad53c544c7febe5f65b24709a04e0a9479b26252229746e4f6af07dfa249f982d497079b93b85baf8c326a34fad8ade32c0aa40
+  checksum: 10c0/6e1b1fba9eee72d4e2b87b9269a6e8622a6e964aab5fdd21949fd1d23fd641d116319753470fb8da115012a66d9d02f74bb0298f5f200d097848a3a87f0239b0
   languageName: node
   linkType: hard
 
