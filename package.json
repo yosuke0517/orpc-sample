@@ -22,7 +22,7 @@
     "@orpc/server": "^1.7.8",
     "@orpc/zod": "^1.7.8",
     "@types/pg": "^8.15.5",
-    "better-sqlite3": "^12.2.0",
+    "better-sqlite3": "^13.0.0",
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.45.0",
     "drizzle-zod": "^0.8.3",
