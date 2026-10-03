@@ -2,7 +2,7 @@
   "name": "orpc-crud",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "yarn@4.18.0",
+  "packageManager": "yarn@4.18.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -26,10 +26,10 @@
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.45.0",
     "drizzle-zod": "^0.8.3",
-    "next": "15.5.25",
+    "next": "15.5.27",
     "pg": "^8.16.3",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
     "server-only": "^0.0.1",
     "tailwind-merge": "^3.3.1"
   },
@@ -44,7 +44,7 @@
     "babel-plugin-react-compiler": "^19.1.0-rc.2",
     "drizzle-kit": "^0.31.4",
     "eslint": "^9",
-    "eslint-config-next": "15.5.25",
+    "eslint-config-next": "15.5.27",
     "tailwindcss": "^4",
     "typescript": "~5.9.0",
     "zod": "^4.0.14"
